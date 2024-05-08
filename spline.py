@@ -8,6 +8,8 @@ import jax.random as random
 from functools import partial
 from jax import jit, vmap
 
+# NOT USED
+
 # for testing
 def compute_b_splines(x: float, i: int, k: int, grid: list[float]) -> float:
     # x is real number
@@ -46,19 +48,3 @@ _compute_all_b_splines = jit(vmap(compute_b_splines_array, in_axes=(None, 0, Non
 def compute_all_b_splines(x: jnp.ndarray, indices: jnp.ndarray, k: int, grid: jnp.ndarray) -> jnp.ndarray:
     extended_grid = extend_grid(grid, k)
     return _compute_all_b_splines(x, indices, k, extended_grid)
-
-
-# for testing
-# x = jnp.array([0.5, 1.5, 2.5])
-# k = 2
-# grid = jnp.array([0, 1, 2, 3, 4])
-# indices = jnp.arange(len(grid) + k - 1)  # Adjust indices based on your grid and k
-
-# splines = compute_all_b_splines(x, indices, k, grid)
-
-# start_time = time.time()
-# for i in range(1000):
-#     splines = compute_all_b_splines(x, indices, k, grid)
-
-# print("Time taken for 1000 iterations: ", time.time() - start_time)
-# print(splines.shape)

@@ -3,6 +3,7 @@ import jax.numpy as jnp
 from spline import compute_all_b_splines
 import jax
 
+# NOT USED
 class KAN(nn.Module):
     in_features: int
     out_features: int
@@ -17,8 +18,8 @@ class KAN(nn.Module):
             lambda rng: jnp.linspace(self.grid_range[0], self.grid_range[1], self.num_grid_points),  # Removed the shape argument as it's not used
             None
         )
-        num_basis = self.num_grid_points + self.k - 1
-        self.coefficients = self.param("coefficients", jax.random.normal, (self.out_features, self.in_features, num_basis))
+        self.num_basis = self.num_grid_points + self.k - 1
+        self.coefficients = self.param("coefficients", jax.random.normal, (self.out_features, self.in_features, self.num_basis))
         self.w = self.param("w", jax.random.normal, (self.out_features, self.in_features))
 
     def __call__(self, inputs: jnp.ndarray):
@@ -32,10 +33,10 @@ class KAN(nn.Module):
             b_spline_values = compute_all_b_splines(x, indices, self.k, grid).T # shape (in_features, num_basis)
 
             def phi_i_j(i, j):
-                return self.w[i, j] * (b_spline_values[j] @ self.coefficients[i, j] + jax.nn.silu(x[j]))
+                return self.w[i, j] * (b_spline_values[j] @ self.coefficients[i, j] / self.num_basis ** 0.5 + jax.nn.silu(x[j]))
             
             def phi_i(i):
-                return jnp.sum(jax.vmap(lambda j: phi_i_j(i, j))(jnp.arange(self.in_features)))
+                return jnp.sum(jax.vmap(lambda j: phi_i_j(i, j))(jnp.arange(self.in_features))) / self.in_features ** 0.5
 
             return jax.vmap(lambda i: phi_i(i))(jnp.arange(self.out_features))
         

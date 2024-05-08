@@ -33,13 +33,3 @@ class TinyStoriesDataset:
             batch_encodings = [encoding + [0] * (self.max_len - len(encoding)) for encoding in batch_encodings]
             yield np.array(batch_encodings), batch_masks
             current_index += batch_size
-
-
-# dataset = TinyStoriesDataset(max_len=256)
-
-# for batch, mask in dataset.create_batches(2):
-#     print(batch)
-#     print(mask)
-#     break
-
-# print("Datset size:", len(dataset))

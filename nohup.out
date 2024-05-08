@@ -1,1 +1,3382 @@
-wandb: | 0.001 MB of 0.289 MB uploadedwandb: \ 0.001 MB of 0.001 MB uploadedwandb: / 0.001 MB of 0.289 MB uploadedwandb: | 0.001 MB of 0.001 MB uploadedwandb: - 0.001 MB of 0.289 MB uploadedwandb: / 0.001 MB of 0.001 MB uploadedwandb: \ 0.001 MB of 0.289 MB uploadedwandb: - 0.001 MB of 0.001 MB uploadedwandb: | 0.001 MB of 0.289 MB uploadedwandb: \ 0.001 MB of 0.001 MB uploadedwandb: / 0.001 MB of 0.289 MB uploadedwandb: | 0.001 MB of 0.001 MB uploadedwandb: - 0.001 MB of 0.289 MB uploadedwandb: / 0.001 MB of 0.001 MB uploadedwandb: \ 0.001 MB of 0.289 MB uploadedwandb: - 0.001 MB of 0.001 MB uploadedwandb: | 0.001 MB of 0.289 MB uploadedwandb: \ 0.001 MB of 0.001 MB uploadedwandb: / 0.001 MB of 0.289 MB uploadedwandb: | 0.001 MB of 0.001 MB uploadedwandb: - 0.001 MB of 0.289 MB uploadedwandb: / 0.001 MB of 0.001 MB uploadedwandb: \ 0.001 MB of 0.289 MB uploadedwandb: - 0.001 MB of 0.001 MB uploadedwandb: | 0.001 MB of 0.289 MB uploadedwandb: \ 0.001 MB of 0.001 MB uploadedwandb: / 0.001 MB of 0.289 MB uploadedwandb: | 0.001 MB of 0.001 MB uploadedwandb: - 0.001 MB of 0.289 MB uploadedwandb: / 0.001 MB of 0.001 MB uploadedwandb: \ 0.001 MB of 0.289 MB uploadedwandb: - 0.001 MB of 0.001 MB uploaded
+Exception ignored in atexit callback: <function _Manager._atexit_setup.<locals>.<lambda> at 0x7f8d8adbb060>
+Traceback (most recent call last):
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/wandb_manager.py", line 156, in <lambda>
+    self._atexit_lambda = lambda: self._atexit_teardown()
+                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/wandb_manager.py", line 165, in _atexit_teardown
+    self._teardown(exit_code)
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/wandb_manager.py", line 176, in _teardown
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/service/service.py", line 263, in join
+    ret = self._internal_proc.wait()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/subprocess.py", line 2053, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/subprocess.py", line 2011, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt: 
+Exception ignored in atexit callback: <bound method Sentry.end_session of <wandb.analytics.sentry.Sentry object at 0x7f8d92ff3150>>
+Traceback (most recent call last):
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/analytics/sentry.py", line 43, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/analytics/sentry.py", line 178, in end_session
+    client.flush()
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/sentry_sdk/client.py", line 821, in flush
+    self.transport.flush(timeout=timeout, callback=callback)
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/sentry_sdk/transport.py", line 568, in flush
+    self._worker.flush(timeout, callback)
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/sentry_sdk/worker.py", line 99, in flush
+    self._wait_flush(timeout, callback)
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/sentry_sdk/worker.py", line 109, in _wait_flush
+    if not self._timed_queue_join(initial_timeout):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/sentry_sdk/worker.py", line 54, in _timed_queue_join
+    queue.all_tasks_done.wait(timeout=delay)
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/threading.py", line 331, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt: 
+2024-05-08 17:01:53.824395: W external/xla/xla/service/gpu/nvptx_compiler.cc:718] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.4.131). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+wandb: Currently logged in as: cg123. Use `wandb login --relogin` to force relogin
+wandb: ERROR Error while calling W&B API: run fq30uk9o was previously created and deleted; try a new run name (<Response [409]>)
+wandb: wandb version 0.17.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in /home/charlie/kan_transformer/wandb/run-20240508_170155-jwfhhldz
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run eager-elevator-64
+wandb: ⭐️ View project at https://wandb.ai/cg123/kan-transformer
+wandb: 🚀 View run at https://wandb.ai/cg123/kan-transformer/runs/jwfhhldz
+Creating model...
+Number of parameters:  16.176128
+Number of non-embedding parameters: 3.3021439999999984
+Loading dataset...
+Repo card metadata block was not found. Setting CardData to empty.
+wandb: ERROR Error while calling W&B API: run fq30uk9o was previously created and deleted; try a new run name (<Response [409]>)
+Dataset loaded.
+Step 0, Loss: 19.713336944580078
+Time taken for step: 11.12779950199183
+Saving params...
+Params saved.
+Step 50, Loss: 12.141942977905273
+Time taken for step: 0.016097237006761134
+Step 100, Loss: 11.232498168945312
+Time taken for step: 0.015878016012720764
+Step 150, Loss: 10.001052856445312
+Time taken for step: 0.015304792003007606
+Step 200, Loss: 10.211099624633789
+Time taken for step: 0.01738417700107675
+Step 250, Loss: 9.347599029541016
+Time taken for step: 0.01653024500410538
+Step 300, Loss: 10.116039276123047
+Time taken for step: 0.016816189992823638
+Step 350, Loss: 10.132658004760742
+Time taken for step: 0.016657676998875104
+Step 400, Loss: 9.303118705749512
+Time taken for step: 0.013245868001831695
+Step 450, Loss: 8.261945724487305
+Time taken for step: 0.01404956600163132
+Step 500, Loss: 9.053580284118652
+Time taken for step: 0.016070765996119007
+Step 550, Loss: 8.604941368103027
+Time taken for step: 0.016624837997369468
+Step 600, Loss: 7.66103458404541
+Time taken for step: 0.016991822005365975
+Step 650, Loss: 7.600327968597412
+Time taken for step: 0.017222028007381596
+Step 700, Loss: 8.342284202575684
+Time taken for step: 0.015452870997251011
+Step 750, Loss: 7.995365142822266
+Time taken for step: 0.01663025200832635
+Step 800, Loss: 7.7290940284729
+Time taken for step: 0.011608348999288864
+Step 850, Loss: 7.855705738067627
+Time taken for step: 0.01640588601003401
+Step 900, Loss: 6.63840389251709
+Time taken for step: 0.016575537010794505
+Step 950, Loss: 7.524131774902344
+Time taken for step: 0.015709836006863043
+Step 1000, Loss: 7.1446990966796875
+Time taken for step: 0.015945334991556592
+Saving params...
+Params saved.
+Step 1050, Loss: 7.167356014251709
+Time taken for step: 0.01568116400449071
+Step 1100, Loss: 6.419912338256836
+Time taken for step: 0.015891893999651074
+Step 1150, Loss: 5.893765449523926
+Time taken for step: 0.016857594993780367
+Step 1200, Loss: 5.819727420806885
+Time taken for step: 0.017052934999810532
+Step 1250, Loss: 6.427258014678955
+Time taken for step: 0.016697830011253245
+Step 1300, Loss: 6.63942289352417
+Time taken for step: 0.016763585997978225
+Step 1350, Loss: 6.502537250518799
+Time taken for step: 0.014633869999670424
+Step 1400, Loss: 6.0677947998046875
+Time taken for step: 0.016550549000385217
+Step 1450, Loss: 5.507962226867676
+Time taken for step: 0.01620415798970498
+wandb: ERROR Error while calling W&B API: run fq30uk9o was previously created and deleted; try a new run name (<Response [409]>)
+Thread SenderThread:
+Traceback (most recent call last):
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 2217, in upsert_run
+    response = self.gql(
+               ^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 341, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/lib/gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/internal/internal_util.py", line 49, in run
+    self._run()
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/internal/internal_util.py", line 93, in _run
+    self._debounce()
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/internal/internal.py", line 334, in _debounce
+    self._sm.debounce()
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/internal/sender.py", line 537, in debounce
+    self._maybe_update_config(always=final)
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/internal/sender.py", line 514, in _maybe_update_config
+    self._debounce_config()
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/sdk/internal/sender.py", line 543, in _debounce_config
+    self._api.upsert_run(
+  File "/home/charlie/miniconda3/envs/jax_env/lib/python3.11/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: run fq30uk9o was previously created and deleted; try a new run name (Error 409: Conflict)
+Step 1500, Loss: 6.26363468170166
+Time taken for step: 0.016083930007880554
+Step 1550, Loss: 6.259607315063477
+Time taken for step: 0.015763596005854197
+wandb: ERROR Internal wandb error: file data was not synced
+Step 1600, Loss: 5.335625648498535
+Time taken for step: 0.01665397199394647
+Step 1650, Loss: 6.107569694519043
+Time taken for step: 0.01578447999781929
+Step 1700, Loss: 6.1507673263549805
+Time taken for step: 0.01666052699147258
+Step 1750, Loss: 5.53154993057251
+Time taken for step: 0.016526553008588962
+Step 1800, Loss: 5.70993185043335
+Time taken for step: 0.014821094999206252
+Step 1850, Loss: 5.433769226074219
+Time taken for step: 0.016248255997197703
+Step 1900, Loss: 5.699528694152832
+Time taken for step: 0.016947387004620396
+Step 1950, Loss: 5.759513854980469
+Time taken for step: 0.016547059000004083
+Step 2000, Loss: 5.652168273925781
+Time taken for step: 0.01675076299579814
+Saving params...
+Params saved.
+Step 2050, Loss: 5.364932537078857
+Time taken for step: 0.015741208000690676
+Step 2100, Loss: 4.653302192687988
+Time taken for step: 0.017118359988671727
+Step 2150, Loss: 5.43724250793457
+Time taken for step: 0.01477061799960211
+Step 2200, Loss: 5.561634063720703
+Time taken for step: 0.015357737996964715
+Step 2250, Loss: 5.308000087738037
+Time taken for step: 0.016952926001977175
+Step 2300, Loss: 5.323246955871582
+Time taken for step: 0.01685370299674105
+Step 2350, Loss: 5.666460990905762
+Time taken for step: 0.01634769899828825
+Step 2400, Loss: 4.987884521484375
+Time taken for step: 0.015337560995249078
+Step 2450, Loss: 5.317325115203857
+Time taken for step: 0.014597929999581538
+Step 2500, Loss: 5.261968612670898
+Time taken for step: 0.016227858010097407
+Step 2550, Loss: 5.632770538330078
+Time taken for step: 0.016541165008675307
+Step 2600, Loss: 4.7691826820373535
+Time taken for step: 0.013424712000414729
+Step 2650, Loss: 5.180042266845703
+Time taken for step: 0.01604900100210216
+Step 2700, Loss: 5.795021057128906
+Time taken for step: 0.016673297999659553
+Step 2750, Loss: 4.567226886749268
+Time taken for step: 0.01621541500207968
+Step 2800, Loss: 5.29532527923584
+Time taken for step: 0.01644722900527995
+Step 2850, Loss: 4.814337253570557
+Time taken for step: 0.017133058005128987
+Step 2900, Loss: 5.119768142700195
+Time taken for step: 0.01626964499882888
+Step 2950, Loss: 5.023136615753174
+Time taken for step: 0.01620635300059803
+Step 3000, Loss: 5.0758538246154785
+Time taken for step: 0.016865780999069102
+Saving params...
+Params saved.
+Step 3050, Loss: 5.171342372894287
+Time taken for step: 0.015987052000127733
+Step 3100, Loss: 4.3256635665893555
+Time taken for step: 0.01673630099685397
+Step 3150, Loss: 5.05594539642334
+Time taken for step: 0.01419617400097195
+Step 3200, Loss: 5.305286407470703
+Time taken for step: 0.010671433992683887
+Step 3250, Loss: 4.46173620223999
+Time taken for step: 0.01672266100649722
+Step 3300, Loss: 4.24805212020874
+Time taken for step: 0.016343873998266645
+Step 3350, Loss: 5.039561748504639
+Time taken for step: 0.01696466500288807
+Step 3400, Loss: 4.792511940002441
+Time taken for step: 0.01669942199077923
+Step 3450, Loss: 5.313680171966553
+Time taken for step: 0.015956218005158007
+Step 3500, Loss: 5.099597930908203
+Time taken for step: 0.0171140869933879
+Step 3550, Loss: 5.097616672515869
+Time taken for step: 0.017075654002837837
+Step 3600, Loss: 4.296246528625488
+Time taken for step: 0.016595252003753558
+Step 3650, Loss: 4.709310054779053
+Time taken for step: 0.01633380500425119
+Step 3700, Loss: 4.02412748336792
+Time taken for step: 0.01745700200262945
+Step 3750, Loss: 5.040412425994873
+Time taken for step: 0.015706174992374144
+Step 3800, Loss: 4.933796405792236
+Time taken for step: 0.016081712004961446
+Step 3850, Loss: 4.054564952850342
+Time taken for step: 0.015880781997111626
+Step 3900, Loss: 4.4301300048828125
+Time taken for step: 0.016342692004400305
+Step 3950, Loss: 4.773326396942139
+Time taken for step: 0.016171980008948594
+Step 4000, Loss: 4.42206335067749
+Time taken for step: 0.01668037699710112
+Saving params...
+Params saved.
+Step 4050, Loss: 4.890992641448975
+Time taken for step: 0.01383112599432934
+Step 4100, Loss: 4.850792407989502
+Time taken for step: 0.015614162999554537
+Step 4150, Loss: 4.952363014221191
+Time taken for step: 0.015977707007550634
+Step 4200, Loss: 4.987457275390625
+Time taken for step: 0.015771076010423712
+Step 4250, Loss: 3.9599883556365967
+Time taken for step: 0.016489100002218038
+Step 4300, Loss: 4.047534465789795
+Time taken for step: 0.016588649988989346
+Step 4350, Loss: 5.016398906707764
+Time taken for step: 0.016519283002708107
+Step 4400, Loss: 4.76863956451416
+Time taken for step: 0.014143498003249988
+Step 4450, Loss: 4.004568576812744
+Time taken for step: 0.01668271201197058
+Step 4500, Loss: 3.7542736530303955
+Time taken for step: 0.016355274012312293
+Step 4550, Loss: 4.7704925537109375
+Time taken for step: 0.017342193008516915
+Step 4600, Loss: 4.390092372894287
+Time taken for step: 0.016039758993429132
+Step 4650, Loss: 4.994324207305908
+Time taken for step: 0.014290380000602454
+Step 4700, Loss: 4.702239513397217
+Time taken for step: 0.01742591499350965
+Step 4750, Loss: 4.93883752822876
+Time taken for step: 0.014634410996222869
+Step 4800, Loss: 4.6260786056518555
+Time taken for step: 0.016717178994440474
+Step 4850, Loss: 4.921176910400391
+Time taken for step: 0.01582385400251951
+Step 4900, Loss: 4.804641246795654
+Time taken for step: 0.016983598994556814
+Step 4950, Loss: 4.488739490509033
+Time taken for step: 0.017004693014314398
+Step 5000, Loss: 4.884048938751221
+Time taken for step: 0.01733665900246706
+Saving params...
+Params saved.
+Step 5050, Loss: 4.845252990722656
+Time taken for step: 0.01683151199540589
+Step 5100, Loss: 4.164273738861084
+Time taken for step: 0.016746729001170024
+Step 5150, Loss: 4.722639560699463
+Time taken for step: 0.01600787699862849
+Step 5200, Loss: 4.408907890319824
+Time taken for step: 0.01645468399510719
+Step 5250, Loss: 3.8153505325317383
+Time taken for step: 0.01506953701027669
+Step 5300, Loss: 4.84433650970459
+Time taken for step: 0.016022363997763023
+Step 5350, Loss: 4.814696311950684
+Time taken for step: 0.011951644002692774
+Step 5400, Loss: 4.146544933319092
+Time taken for step: 0.016993817000184208
+Step 5450, Loss: 4.588221549987793
+Time taken for step: 0.015990195010090247
+Step 5500, Loss: 4.98196268081665
+Time taken for step: 0.01702087301237043
+Step 5550, Loss: 4.433076858520508
+Time taken for step: 0.016961834000539966
+Step 5600, Loss: 4.74673318862915
+Time taken for step: 0.012142093997681513
+Step 5650, Loss: 4.357145309448242
+Time taken for step: 0.016652830003295094
+Step 5700, Loss: 5.110631942749023
+Time taken for step: 0.01676245500857476
+Step 5750, Loss: 3.6312122344970703
+Time taken for step: 0.017721947995596565
+Step 5800, Loss: 4.253066062927246
+Time taken for step: 0.01594414099236019
+Step 5850, Loss: 4.51063871383667
+Time taken for step: 0.014720058010425419
+Step 5900, Loss: 4.610586643218994
+Time taken for step: 0.015547684000921436
+Step 5950, Loss: 3.879176378250122
+Time taken for step: 0.016709076997358352
+Step 6000, Loss: 3.5003981590270996
+Time taken for step: 0.01667400800215546
+Saving params...
+Params saved.
+Step 6050, Loss: 4.590963363647461
+Time taken for step: 0.016651768994051963
+Step 6100, Loss: 4.814321041107178
+Time taken for step: 0.017147816004580818
+Step 6150, Loss: 4.65975284576416
+Time taken for step: 0.01634559899684973
+Step 6200, Loss: 4.749301910400391
+Time taken for step: 0.01704835399868898
+Step 6250, Loss: 4.459630012512207
+Time taken for step: 0.009307134998380207
+Step 6300, Loss: 4.448243141174316
+Time taken for step: 0.016428368995548226
+Step 6350, Loss: 4.589760780334473
+Time taken for step: 0.016906409000512213
+Step 6400, Loss: 4.161072731018066
+Time taken for step: 0.01714370799891185
+Step 6450, Loss: 4.335838794708252
+Time taken for step: 0.01609903400822077
+Step 6500, Loss: 4.803513050079346
+Time taken for step: 0.016480742997373454
+Step 6550, Loss: 4.694149971008301
+Time taken for step: 0.015945673992973752
+Step 6600, Loss: 4.1068830490112305
+Time taken for step: 0.016772949995356612
+Step 6650, Loss: 4.008211135864258
+Time taken for step: 0.012968114999239333
+Step 6700, Loss: 4.1136956214904785
+Time taken for step: 0.016235470000538044
+Step 6750, Loss: 4.111015796661377
+Time taken for step: 0.016662579000694677
+Step 6800, Loss: 3.870600461959839
+Time taken for step: 0.016739591999794357
+Step 6850, Loss: 3.496245861053467
+Time taken for step: 0.016920702997595072
+Step 6900, Loss: 4.069894790649414
+Time taken for step: 0.015967166007612832
+Step 6950, Loss: 4.195032596588135
+Time taken for step: 0.016377692998503335
+Step 7000, Loss: 3.460731267929077
+Time taken for step: 0.01638300700869877
+Saving params...
+Params saved.
+Step 7050, Loss: 4.253771781921387
+Time taken for step: 0.016967553994618356
+Step 7100, Loss: 4.8820414543151855
+Time taken for step: 0.016098148000310175
+Step 7150, Loss: 4.634120464324951
+Time taken for step: 0.016516071002115496
+Step 7200, Loss: 4.251218795776367
+Time taken for step: 0.015947010993841104
+Step 7250, Loss: 4.467895030975342
+Time taken for step: 0.01646858299500309
+Step 7300, Loss: 4.382268905639648
+Time taken for step: 0.01550575700821355
+Step 7350, Loss: 4.2725348472595215
+Time taken for step: 0.017105328995967284
+Step 7400, Loss: 3.941864013671875
+Time taken for step: 0.015282622000086121
+Step 7450, Loss: 4.205347537994385
+Time taken for step: 0.01592166601039935
+Step 7500, Loss: 4.079465389251709
+Time taken for step: 0.01652693300275132
+Step 7550, Loss: 3.434910774230957
+Time taken for step: 0.0165107490029186
+Step 7600, Loss: 4.244593143463135
+Time taken for step: 0.017070821995730512
+Step 7650, Loss: 4.277603626251221
+Time taken for step: 0.015083343998412602
+Step 7700, Loss: 4.263956069946289
+Time taken for step: 0.01592258200980723
+Step 7750, Loss: 4.395586967468262
+Time taken for step: 0.017144160010502674
+Step 7800, Loss: 4.3134446144104
+Time taken for step: 0.01643353799590841
+Step 7850, Loss: 4.335291385650635
+Time taken for step: 0.01650888900621794
+Step 7900, Loss: 4.203265190124512
+Time taken for step: 0.015865188994212076
+Step 7950, Loss: 4.442844390869141
+Time taken for step: 0.016706863010767847
+Step 8000, Loss: 3.3690221309661865
+Time taken for step: 0.1696586890029721
+Saving params...
+Params saved.
+Step 8050, Loss: 4.0218048095703125
+Time taken for step: 0.016841582997585647
+Step 8100, Loss: 4.5516157150268555
+Time taken for step: 0.016072653990704566
+Step 8150, Loss: 3.8742215633392334
+Time taken for step: 0.010750047003966756
+Step 8200, Loss: 4.351025104522705
+Time taken for step: 0.01653001799422782
+Step 8250, Loss: 3.2058887481689453
+Time taken for step: 0.016850851010531187
+Step 8300, Loss: 4.282309055328369
+Time taken for step: 0.016079765002359636
+Step 8350, Loss: 4.12000036239624
+Time taken for step: 0.015699414012487978
+Step 8400, Loss: 4.367405891418457
+Time taken for step: 0.016792490001535043
+Step 8450, Loss: 3.6155471801757812
+Time taken for step: 0.015934644994558766
+Step 8500, Loss: 3.9820704460144043
+Time taken for step: 0.015769726000144146
+Step 8550, Loss: 3.7402772903442383
+Time taken for step: 0.01645554900460411
+Step 8600, Loss: 3.9893064498901367
+Time taken for step: 0.016120543994475156
+Step 8650, Loss: 4.477146148681641
+Time taken for step: 0.016703714994946495
+Step 8700, Loss: 3.984811305999756
+Time taken for step: 0.01528292401053477
+Step 8750, Loss: 3.8743348121643066
+Time taken for step: 0.015322231003665365
+Step 8800, Loss: 3.7463815212249756
+Time taken for step: 0.01661268099269364
+Step 8850, Loss: 4.488507270812988
+Time taken for step: 0.01590317599766422
+Step 8900, Loss: 4.186713695526123
+Time taken for step: 0.016249557011178695
+Step 8950, Loss: 3.5392074584960938
+Time taken for step: 0.016809729000669904
+Step 9000, Loss: 4.079496383666992
+Time taken for step: 0.016533246991457418
+Saving params...
+Params saved.
+Step 9050, Loss: 3.4274239540100098
+Time taken for step: 0.016857462003827095
+Step 9100, Loss: 4.0493483543396
+Time taken for step: 0.017148661994724534
+Step 9150, Loss: 3.1452713012695312
+Time taken for step: 0.016600697999820113
+Step 9200, Loss: 3.2165863513946533
+Time taken for step: 0.01573449200077448
+Step 9250, Loss: 3.3543009757995605
+Time taken for step: 0.014693978009745479
+Step 9300, Loss: 3.6969075202941895
+Time taken for step: 0.015624125997419469
+Step 9350, Loss: 4.227701663970947
+Time taken for step: 0.016755179996835068
+Step 9400, Loss: 4.588286876678467
+Time taken for step: 0.0166612780012656
+Step 9450, Loss: 4.262989044189453
+Time taken for step: 0.01643234099901747
+Step 9500, Loss: 4.171048641204834
+Time taken for step: 0.016310348000843078
+Step 9550, Loss: 3.0513546466827393
+Time taken for step: 0.01683000499906484
+Step 9600, Loss: 4.142396450042725
+Time taken for step: 0.01575030000822153
+Step 9650, Loss: 3.6557743549346924
+Time taken for step: 0.015728935002698563
+Step 9700, Loss: 4.152291774749756
+Time taken for step: 0.015690254003857262
+Step 9750, Loss: 3.97963809967041
+Time taken for step: 0.016770948001067154
+Step 9800, Loss: 3.380938768386841
+Time taken for step: 0.016884102005860768
+Step 9850, Loss: 4.119499206542969
+Time taken for step: 0.016725788009352982
+Step 9900, Loss: 3.952576160430908
+Time taken for step: 0.016560624993871897
+Step 9950, Loss: 4.017924785614014
+Time taken for step: 0.01649492999422364
+Step 10000, Loss: 4.312226295471191
+Time taken for step: 0.017063544000848196
+Saving params...
+Params saved.
+Step 10050, Loss: 3.8042571544647217
+Time taken for step: 0.01722386600158643
+Step 10100, Loss: 3.4577691555023193
+Time taken for step: 0.01680255599785596
+Step 10150, Loss: 3.981367826461792
+Time taken for step: 0.012921244007884525
+Step 10200, Loss: 4.281705379486084
+Time taken for step: 0.01703061899752356
+Step 10250, Loss: 4.303360462188721
+Time taken for step: 0.016411500997492112
+Step 10300, Loss: 4.363182544708252
+Time taken for step: 0.01684512200881727
+Step 10350, Loss: 3.724116563796997
+Time taken for step: 0.016343658993719146
+Step 10400, Loss: 3.386854410171509
+Time taken for step: 0.015904750995105132
+Step 10450, Loss: 3.438173770904541
+Time taken for step: 0.01657348200387787
+Step 10500, Loss: 3.900406837463379
+Time taken for step: 0.01606571298907511
+Step 10550, Loss: 3.627295732498169
+Time taken for step: 0.016425398003775626
+Step 10600, Loss: 3.628845453262329
+Time taken for step: 0.016768254994531162
+Step 10650, Loss: 3.160785436630249
+Time taken for step: 0.01659375299641397
+Step 10700, Loss: 3.693431854248047
+Time taken for step: 0.016859018011018634
+Step 10750, Loss: 3.9980175495147705
+Time taken for step: 0.01637222799763549
+Step 10800, Loss: 4.292855262756348
+Time taken for step: 0.01583366699924227
+Step 10850, Loss: 3.928532361984253
+Time taken for step: 0.015850536001380533
+Step 10900, Loss: 3.4348039627075195
+Time taken for step: 0.016003308002837002
+Step 10950, Loss: 3.048635959625244
+Time taken for step: 0.01636716899520252
+Step 11000, Loss: 3.2865378856658936
+Time taken for step: 0.016810364002594724
+Saving params...
+Params saved.
+Step 11050, Loss: 2.8334546089172363
+Time taken for step: 0.012442027000361122
+Step 11100, Loss: 4.252969264984131
+Time taken for step: 0.015880442995694466
+Step 11150, Loss: 3.9890120029449463
+Time taken for step: 0.013423563999822363
+Step 11200, Loss: 3.636993408203125
+Time taken for step: 0.01621382600569632
+Step 11250, Loss: 4.175449848175049
+Time taken for step: 0.016252070010523312
+Step 11300, Loss: 4.212283611297607
+Time taken for step: 0.01680792000843212
+Step 11350, Loss: 3.366615056991577
+Time taken for step: 0.01660925999749452
+Step 11400, Loss: 3.524881362915039
+Time taken for step: 0.01355929700366687
+Step 11450, Loss: 3.052255392074585
+Time taken for step: 0.015584546999889426
+Step 11500, Loss: 3.9691593647003174
+Time taken for step: 0.016688200004864484
+Step 11550, Loss: 3.8104007244110107
+Time taken for step: 0.016513947004568763
+Step 11600, Loss: 3.9429855346679688
+Time taken for step: 0.016433252996648662
+Step 11650, Loss: 4.284768104553223
+Time taken for step: 0.016556241011130624
+Step 11700, Loss: 4.2874603271484375
+Time taken for step: 0.01687099799164571
+Step 11750, Loss: 3.081782817840576
+Time taken for step: 0.0169310659985058
+Step 11800, Loss: 3.897996664047241
+Time taken for step: 0.01648598899191711
+Step 11850, Loss: 3.911231517791748
+Time taken for step: 0.0165740809898125
+Step 11900, Loss: 3.4582793712615967
+Time taken for step: 0.01601201799348928
+Step 11950, Loss: 3.9488637447357178
+Time taken for step: 0.01639039401197806
+Step 12000, Loss: 4.090607643127441
+Time taken for step: 0.01676913199480623
+Saving params...
+Params saved.
+Step 12050, Loss: 4.132208347320557
+Time taken for step: 0.017166678997455165
+Step 12100, Loss: 3.8378374576568604
+Time taken for step: 0.016433669996331446
+Step 12150, Loss: 3.184985876083374
+Time taken for step: 0.017005331988912076
+Step 12200, Loss: 3.3009471893310547
+Time taken for step: 0.016462208004668355
+Step 12250, Loss: 3.7900373935699463
+Time taken for step: 0.01646181799878832
+Step 12300, Loss: 3.2040858268737793
+Time taken for step: 0.01639017599518411
+Step 12350, Loss: 4.014719486236572
+Time taken for step: 0.016593454987742007
+Step 12400, Loss: 3.970407009124756
+Time taken for step: 0.01237787700665649
+Step 12450, Loss: 3.3050596714019775
+Time taken for step: 0.010386916997958906
+Step 12500, Loss: 2.9300475120544434
+Time taken for step: 0.016925065996474586
+Step 12550, Loss: 3.3446502685546875
+Time taken for step: 0.01591574501071591
+Step 12600, Loss: 2.84352445602417
+Time taken for step: 0.014507935993606225
+Step 12650, Loss: 3.8493752479553223
+Time taken for step: 0.016375097999116406
+Step 12700, Loss: 3.9801530838012695
+Time taken for step: 0.01742680399911478
+Step 12750, Loss: 3.3865411281585693
+Time taken for step: 0.016515172988874838
+Step 12800, Loss: 3.951223850250244
+Time taken for step: 0.01101042098889593
+Step 12850, Loss: 4.116944313049316
+Time taken for step: 0.017041518003679812
+Step 12900, Loss: 4.0215678215026855
+Time taken for step: 0.015117964998353273
+Step 12950, Loss: 2.6490697860717773
+Time taken for step: 0.016302110001561232
+Step 13000, Loss: 4.012079238891602
+Time taken for step: 0.01648447099432815
+Saving params...
+Params saved.
+Step 13050, Loss: 2.9982452392578125
+Time taken for step: 0.016747079993365332
+Step 13100, Loss: 3.079367160797119
+Time taken for step: 0.009922120996634476
+Step 13150, Loss: 3.0943853855133057
+Time taken for step: 0.016604024000116624
+Step 13200, Loss: 2.9236397743225098
+Time taken for step: 0.01688506999926176
+Step 13250, Loss: 3.5248091220855713
+Time taken for step: 0.01620757399359718
+Step 13300, Loss: 3.853219747543335
+Time taken for step: 0.016322962997946888
+Step 13350, Loss: 3.233391761779785
+Time taken for step: 0.013202936999732628
+Step 13400, Loss: 3.583376169204712
+Time taken for step: 0.016241420002188534
+Step 13450, Loss: 3.964792490005493
+Time taken for step: 0.017017585996654816
+Step 13500, Loss: 3.4884226322174072
+Time taken for step: 0.01648286399722565
+Step 13550, Loss: 3.0625462532043457
+Time taken for step: 0.0175458760058973
+Step 13600, Loss: 3.419525384902954
+Time taken for step: 0.01598608300264459
+Step 13650, Loss: 4.254255771636963
+Time taken for step: 0.0171654040022986
+Step 13700, Loss: 4.3022661209106445
+Time taken for step: 0.016448445996502414
+Step 13750, Loss: 3.8565614223480225
+Time taken for step: 0.016329353995388374
+Step 13800, Loss: 3.3573930263519287
+Time taken for step: 0.01574244600487873
+Step 13850, Loss: 3.4945907592773438
+Time taken for step: 0.016915926011279225
+Step 13900, Loss: 3.7334370613098145
+Time taken for step: 0.016169278998859227
+Step 13950, Loss: 3.7524218559265137
+Time taken for step: 0.016436550009530038
+Step 14000, Loss: 3.93941068649292
+Time taken for step: 0.016697717990609817
+Saving params...
+Params saved.
+Step 14050, Loss: 3.1675076484680176
+Time taken for step: 0.01047903900325764
+Step 14100, Loss: 4.182422637939453
+Time taken for step: 0.016028034006012604
+Step 14150, Loss: 3.1889498233795166
+Time taken for step: 0.016454797005280852
+Step 14200, Loss: 3.785492181777954
+Time taken for step: 0.01525476700044237
+Step 14250, Loss: 3.1911773681640625
+Time taken for step: 0.01582427900575567
+Step 14300, Loss: 3.493697166442871
+Time taken for step: 0.015540723004960455
+Step 14350, Loss: 3.0395750999450684
+Time taken for step: 0.016458625002996996
+Step 14400, Loss: 3.487412214279175
+Time taken for step: 0.01671423699008301
+Step 14450, Loss: 3.906977891921997
+Time taken for step: 0.01654277599300258
+Step 14500, Loss: 4.0898261070251465
+Time taken for step: 0.01594528299756348
+Step 14550, Loss: 3.07425856590271
+Time taken for step: 0.015074117996846326
+Step 14600, Loss: 3.7256839275360107
+Time taken for step: 0.016389865006203763
+Step 14650, Loss: 2.8556065559387207
+Time taken for step: 0.01689917698968202
+Step 14700, Loss: 3.549612283706665
+Time taken for step: 0.014637728003435768
+Step 14750, Loss: 3.457700252532959
+Time taken for step: 0.01626580799347721
+Step 14800, Loss: 3.0378997325897217
+Time taken for step: 0.01663349400041625
+Step 14850, Loss: 3.4085118770599365
+Time taken for step: 0.016547949009691365
+Step 14900, Loss: 3.92029070854187
+Time taken for step: 0.016733363998355344
+Step 14950, Loss: 2.9615139961242676
+Time taken for step: 0.016485040992847644
+Step 15000, Loss: 3.345205783843994
+Time taken for step: 0.013693999993847683
+Saving params...
+Params saved.
+Step 15050, Loss: 3.198580503463745
+Time taken for step: 0.016878987997188233
+Step 15100, Loss: 3.9247825145721436
+Time taken for step: 0.01668096799403429
+Step 15150, Loss: 3.5495457649230957
+Time taken for step: 0.015798567997990176
+Step 15200, Loss: 3.557217597961426
+Time taken for step: 0.01548006699886173
+Step 15250, Loss: 3.859323501586914
+Time taken for step: 0.016623803006950766
+Step 15300, Loss: 3.078780174255371
+Time taken for step: 0.017176716006360948
+Step 15350, Loss: 3.98459792137146
+Time taken for step: 0.013449876991217025
+Step 15400, Loss: 3.5988101959228516
+Time taken for step: 0.016338204994099215
+Step 15450, Loss: 2.9839365482330322
+Time taken for step: 0.016874690001714043
+Step 15500, Loss: 4.028568267822266
+Time taken for step: 0.016591344989137724
+Step 15550, Loss: 3.3231749534606934
+Time taken for step: 0.01621954599977471
+Step 15600, Loss: 3.731367826461792
+Time taken for step: 0.016575986999669112
+Step 15650, Loss: 2.9740335941314697
+Time taken for step: 0.016556586007936858
+Step 15700, Loss: 2.9307422637939453
+Time taken for step: 0.016762608996941708
+Step 15750, Loss: 2.9537465572357178
+Time taken for step: 0.017678272008197382
+Step 15800, Loss: 4.24119234085083
+Time taken for step: 0.012448018998838961
+Step 15850, Loss: 4.049777984619141
+Time taken for step: 0.016402241002651863
+Step 15900, Loss: 3.856212615966797
+Time taken for step: 0.016564749006647617
+Step 15950, Loss: 3.781953811645508
+Time taken for step: 0.014976748992921785
+Step 16000, Loss: 3.831679582595825
+Time taken for step: 0.01684344600653276
+Saving params...
+Params saved.
+Step 16050, Loss: 3.84299898147583
+Time taken for step: 0.016883828007848933
+Step 16100, Loss: 3.930905342102051
+Time taken for step: 0.016413962992373854
+Step 16150, Loss: 3.856816291809082
+Time taken for step: 0.01672924100421369
+Step 16200, Loss: 3.250476598739624
+Time taken for step: 0.016278398004942574
+Step 16250, Loss: 3.592176914215088
+Time taken for step: 0.01611094300460536
+Step 16300, Loss: 3.150067090988159
+Time taken for step: 0.01665290399978403
+Step 16350, Loss: 3.837770700454712
+Time taken for step: 0.016866576988832094
+Step 16400, Loss: 3.8031985759735107
+Time taken for step: 0.01677395499427803
+Step 16450, Loss: 3.9840269088745117
+Time taken for step: 0.016919845991651528
+Step 16500, Loss: 3.2013590335845947
+Time taken for step: 0.016820791002828628
+Step 16550, Loss: 3.6752123832702637
+Time taken for step: 0.016137143000378273
+Step 16600, Loss: 3.638801336288452
+Time taken for step: 0.01646985500701703
+Step 16650, Loss: 4.106247425079346
+Time taken for step: 0.016038269008276984
+Step 16700, Loss: 3.804551124572754
+Time taken for step: 0.015473927007406019
+Step 16750, Loss: 3.501319646835327
+Time taken for step: 0.015765643009217456
+Step 16800, Loss: 3.17098331451416
+Time taken for step: 0.01681044200086035
+Step 16850, Loss: 3.64725661277771
+Time taken for step: 0.016504449988133274
+Step 16900, Loss: 2.799288749694824
+Time taken for step: 0.017087195999920368
+Step 16950, Loss: 3.27614688873291
+Time taken for step: 0.016337644003215246
+Step 17000, Loss: 3.5300517082214355
+Time taken for step: 0.016294529996230267
+Saving params...
+Params saved.
+Step 17050, Loss: 3.4276256561279297
+Time taken for step: 0.016270977997919545
+Step 17100, Loss: 3.6394619941711426
+Time taken for step: 0.0173408419941552
+Step 17150, Loss: 3.767172336578369
+Time taken for step: 0.01580143599130679
+Step 17200, Loss: 3.2132797241210938
+Time taken for step: 0.01678319698839914
+Step 17250, Loss: 3.574026584625244
+Time taken for step: 0.015878527992754243
+Step 17300, Loss: 3.8626835346221924
+Time taken for step: 0.016045633994508535
+Step 17350, Loss: 3.726522445678711
+Time taken for step: 0.01632551700458862
+Step 17400, Loss: 3.5128583908081055
+Time taken for step: 0.01630124798975885
+Step 17450, Loss: 3.490438938140869
+Time taken for step: 0.016888275000383146
+Step 17500, Loss: 3.902914524078369
+Time taken for step: 0.0166764979949221
+Step 17550, Loss: 3.689621925354004
+Time taken for step: 0.016792437992990017
+Step 17600, Loss: 2.768631935119629
+Time taken for step: 0.012565822995384224
+Step 17650, Loss: 2.998711347579956
+Time taken for step: 0.016710065014194697
+Step 17700, Loss: 4.159318447113037
+Time taken for step: 0.01637596001091879
+Step 17750, Loss: 3.6116061210632324
+Time taken for step: 0.016796201991382986
+Step 17800, Loss: 3.4083495140075684
+Time taken for step: 0.016208398999879137
+Step 17850, Loss: 3.6703383922576904
+Time taken for step: 0.0157693140063202
+Step 17900, Loss: 3.888331651687622
+Time taken for step: 0.016332985993358307
+Step 17950, Loss: 3.629678249359131
+Time taken for step: 0.0163899670005776
+Step 18000, Loss: 4.074916839599609
+Time taken for step: 0.016980126994894817
+Saving params...
+Params saved.
+Step 18050, Loss: 3.13494873046875
+Time taken for step: 0.017108910004026257
+Step 18100, Loss: 3.3868417739868164
+Time taken for step: 0.01450880199263338
+Step 18150, Loss: 2.82470703125
+Time taken for step: 0.015850101990508847
+Step 18200, Loss: 3.0194485187530518
+Time taken for step: 0.016068065000581555
+Step 18250, Loss: 3.39927077293396
+Time taken for step: 0.014996690006228164
+Step 18300, Loss: 3.6404848098754883
+Time taken for step: 0.01570770599937532
+Step 18350, Loss: 3.569239377975464
+Time taken for step: 0.01691321301041171
+Step 18400, Loss: 2.703962564468384
+Time taken for step: 0.016435458994237706
+Step 18450, Loss: 2.6407978534698486
+Time taken for step: 0.01665221300208941
+Step 18500, Loss: 3.3965249061584473
+Time taken for step: 0.015519330991082825
+Step 18550, Loss: 2.942488670349121
+Time taken for step: 0.01675044500734657
+Step 18600, Loss: 3.2592387199401855
+Time taken for step: 0.014677814004244283
+Step 18650, Loss: 3.4373786449432373
+Time taken for step: 0.01449323799170088
+Step 18700, Loss: 2.8519558906555176
+Time taken for step: 0.01647790800780058
+Step 18750, Loss: 3.232534646987915
+Time taken for step: 0.016232398003921844
+Step 18800, Loss: 3.769413709640503
+Time taken for step: 0.016808201995445415
+Step 18850, Loss: 2.6833646297454834
+Time taken for step: 0.017202695991727524
+Step 18900, Loss: 3.4658396244049072
+Time taken for step: 0.01682966700172983
+Step 18950, Loss: 2.9704532623291016
+Time taken for step: 0.017080584992072545
+Step 19000, Loss: 4.0400590896606445
+Time taken for step: 0.016837913004565053
+Saving params...
+Params saved.
+Step 19050, Loss: 3.755652666091919
+Time taken for step: 0.016520525998203084
+Step 19100, Loss: 2.9336931705474854
+Time taken for step: 0.016717332997359335
+Step 19150, Loss: 3.856907606124878
+Time taken for step: 0.015689797000959516
+Step 19200, Loss: 2.6515164375305176
+Time taken for step: 0.016409682008088566
+Step 19250, Loss: 3.709620237350464
+Time taken for step: 0.016144018998602405
+Step 19300, Loss: 3.6438522338867188
+Time taken for step: 0.016509448003489524
+Step 19350, Loss: 2.31726336479187
+Time taken for step: 0.016232588997809216
+Step 19400, Loss: 3.1493964195251465
+Time taken for step: 0.014601058006519452
+Step 19450, Loss: 2.8924553394317627
+Time taken for step: 0.01638508099131286
+Step 19500, Loss: 3.116762161254883
+Time taken for step: 0.015595236007357016
+Step 19550, Loss: 2.946800708770752
+Time taken for step: 0.016705193993402645
+Step 19600, Loss: 2.7849297523498535
+Time taken for step: 0.016551694003283046
+Step 19650, Loss: 2.86912202835083
+Time taken for step: 0.016547967999940738
+Step 19700, Loss: 3.3383288383483887
+Time taken for step: 0.015576046993373893
+Step 19750, Loss: 3.369009494781494
+Time taken for step: 0.016581428004428744
+Step 19800, Loss: 2.9188826084136963
+Time taken for step: 0.01663992200337816
+Step 19850, Loss: 3.2173051834106445
+Time taken for step: 0.01569003998884
+Step 19900, Loss: 3.9458699226379395
+Time taken for step: 0.0164065509889042
+Step 19950, Loss: 3.643962860107422
+Time taken for step: 0.013967698003398255
+Step 20000, Loss: 2.8264482021331787
+Time taken for step: 0.010825881006894633
+Saving params...
+Params saved.
+Step 20050, Loss: 3.89689302444458
+Time taken for step: 0.015002587999333628
+Step 20100, Loss: 3.63403058052063
+Time taken for step: 0.016416475002188236
+Step 20150, Loss: 3.091456890106201
+Time taken for step: 0.016147746006026864
+Step 20200, Loss: 3.792470932006836
+Time taken for step: 0.01735826299409382
+Step 20250, Loss: 3.669008493423462
+Time taken for step: 0.016438670005300082
+Step 20300, Loss: 3.7137515544891357
+Time taken for step: 0.01633094999124296
+Step 20350, Loss: 3.530000686645508
+Time taken for step: 0.016316815992468037
+Step 20400, Loss: 3.3816423416137695
+Time taken for step: 0.01342268601001706
+Step 20450, Loss: 3.669086456298828
+Time taken for step: 0.016183801999432035
+Step 20500, Loss: 3.4447109699249268
+Time taken for step: 0.011740563990315422
+Step 20550, Loss: 3.800365924835205
+Time taken for step: 0.016348199002095498
+Step 20600, Loss: 3.677602767944336
+Time taken for step: 0.016722792002838105
+Step 20650, Loss: 3.7353696823120117
+Time taken for step: 0.015958252013660967
+Step 20700, Loss: 2.705815553665161
+Time taken for step: 0.01778872100112494
+Step 20750, Loss: 3.585674524307251
+Time taken for step: 0.016073962004156783
+Step 20800, Loss: 3.9609391689300537
+Time taken for step: 0.016581310002948157
+Step 20850, Loss: 3.745659828186035
+Time taken for step: 0.015500501001952216
+Step 20900, Loss: 3.852388858795166
+Time taken for step: 0.014025726006366313
+Step 20950, Loss: 3.6629467010498047
+Time taken for step: 0.016466015003970824
+Step 21000, Loss: 3.044271945953369
+Time taken for step: 0.01583353399473708
+Saving params...
+Params saved.
+Step 21050, Loss: 3.3425378799438477
+Time taken for step: 0.016271779997623526
+Step 21100, Loss: 3.761389970779419
+Time taken for step: 0.017045298009179533
+Step 21150, Loss: 3.7627103328704834
+Time taken for step: 0.01324457699956838
+Step 21200, Loss: 3.5430266857147217
+Time taken for step: 0.0148492209991673
+Step 21250, Loss: 3.806471824645996
+Time taken for step: 0.016727374997572042
+Step 21300, Loss: 3.1356818675994873
+Time taken for step: 0.014220856988686137
+Step 21350, Loss: 3.0894277095794678
+Time taken for step: 0.016959468004642986
+Step 21400, Loss: 3.795715570449829
+Time taken for step: 0.016823894999106415
+Step 21450, Loss: 2.9172616004943848
+Time taken for step: 0.01592160300060641
+Step 21500, Loss: 3.8390705585479736
+Time taken for step: 0.01643254300870467
+Step 21550, Loss: 2.868997573852539
+Time taken for step: 0.016593054999248125
+Step 21600, Loss: 3.6920807361602783
+Time taken for step: 0.016794960989500396
+Step 21650, Loss: 3.4664981365203857
+Time taken for step: 0.014776098003494553
+Step 21700, Loss: 3.8489811420440674
+Time taken for step: 0.016141665997565724
+Step 21750, Loss: 3.5293662548065186
+Time taken for step: 0.015869886992732063
+Step 21800, Loss: 3.8978445529937744
+Time taken for step: 0.015816779996384867
+Step 21850, Loss: 3.19819974899292
+Time taken for step: 0.01744374498957768
+Step 21900, Loss: 3.7427480220794678
+Time taken for step: 0.01692438399186358
+Step 21950, Loss: 2.7822325229644775
+Time taken for step: 0.016536128998268396
+Step 22000, Loss: 3.3241043090820312
+Time taken for step: 0.016005975994630717
+Saving params...
+Params saved.
+Step 22050, Loss: 2.9929771423339844
+Time taken for step: 0.01589580299332738
+Step 22100, Loss: 4.10959529876709
+Time taken for step: 0.013052619993686676
+Step 22150, Loss: 3.671955108642578
+Time taken for step: 0.016351113008568063
+Step 22200, Loss: 2.5723588466644287
+Time taken for step: 0.01684646999638062
+Step 22250, Loss: 3.5970211029052734
+Time taken for step: 0.012938072002725676
+Step 22300, Loss: 3.624274969100952
+Time taken for step: 0.01653194498794619
+Step 22350, Loss: 3.328598976135254
+Time taken for step: 0.016640697998809628
+Step 22400, Loss: 3.572788953781128
+Time taken for step: 0.016232872992986813
+Step 22450, Loss: 3.678842306137085
+Time taken for step: 0.016770663001807407
+Step 22500, Loss: 3.7281763553619385
+Time taken for step: 0.01580685299995821
+Step 22550, Loss: 3.7359261512756348
+Time taken for step: 0.01188765100960154
+Step 22600, Loss: 3.560340642929077
+Time taken for step: 0.016551349996007048
+Step 22650, Loss: 2.7982053756713867
+Time taken for step: 0.017097948992159218
+Step 22700, Loss: 2.761610984802246
+Time taken for step: 0.01652334100799635
+Step 22750, Loss: 3.4654417037963867
+Time taken for step: 0.015660331991966814
+Step 22800, Loss: 2.8238720893859863
+Time taken for step: 0.016880467999726534
+Step 22850, Loss: 3.7291038036346436
+Time taken for step: 0.016685096998116933
+Step 22900, Loss: 3.688392400741577
+Time taken for step: 0.016119335006806068
+Step 22950, Loss: 3.0614635944366455
+Time taken for step: 0.009475749000557698
+Step 23000, Loss: 3.6082863807678223
+Time taken for step: 0.01612524699885398
+Saving params...
+Params saved.
+Step 23050, Loss: 2.6522910594940186
+Time taken for step: 0.016983394001726992
+Step 23100, Loss: 3.3002588748931885
+Time taken for step: 0.015630196008714847
+Step 23150, Loss: 2.9436259269714355
+Time taken for step: 0.014572771993698552
+Step 23200, Loss: 3.2751643657684326
+Time taken for step: 0.01639684700057842
+Step 23250, Loss: 3.796037197113037
+Time taken for step: 0.016411267992225476
+Step 23300, Loss: 3.6652121543884277
+Time taken for step: 0.016409764997661114
+Step 23350, Loss: 3.6879351139068604
+Time taken for step: 0.016681099994457327
+Step 23400, Loss: 3.544877529144287
+Time taken for step: 0.01695350899535697
+Step 23450, Loss: 3.537381172180176
+Time taken for step: 0.016337886001565494
+Step 23500, Loss: 2.6365668773651123
+Time taken for step: 0.015872649004450068
+Step 23550, Loss: 2.7233428955078125
+Time taken for step: 0.016281253003398888
+Step 23600, Loss: 2.6870617866516113
+Time taken for step: 0.016763138002716005
+Step 23650, Loss: 2.9412975311279297
+Time taken for step: 0.016075587991508655
+Step 23700, Loss: 3.6998558044433594
+Time taken for step: 0.016740803999709897
+Step 23750, Loss: 2.7667784690856934
+Time taken for step: 0.016694732999894768
+Step 23800, Loss: 3.664576768875122
+Time taken for step: 0.016939855995588005
+Step 23850, Loss: 3.3970706462860107
+Time taken for step: 0.016478677003760822
+Step 23900, Loss: 3.5941944122314453
+Time taken for step: 0.016619847010588273
+Step 23950, Loss: 2.441716194152832
+Time taken for step: 0.01639343600254506
+Step 24000, Loss: 2.630629062652588
+Time taken for step: 0.017081184007111005
+Saving params...
+Params saved.
+Step 24050, Loss: 2.712848663330078
+Time taken for step: 0.016730104995076545
+Step 24100, Loss: 3.1329610347747803
+Time taken for step: 0.016937149004661478
+Step 24150, Loss: 3.5915510654449463
+Time taken for step: 0.01712980298907496
+Step 24200, Loss: 3.6894445419311523
+Time taken for step: 0.01692246900347527
+Step 24250, Loss: 3.742361068725586
+Time taken for step: 0.016825837999931537
+Step 24300, Loss: 3.8599114418029785
+Time taken for step: 0.014212252994184382
+Step 24350, Loss: 3.442317247390747
+Time taken for step: 0.01651064900215715
+Step 24400, Loss: 2.7131383419036865
+Time taken for step: 0.016091344004962593
+Step 24450, Loss: 3.1641323566436768
+Time taken for step: 0.016821101002278738
+Step 24500, Loss: 3.728209972381592
+Time taken for step: 0.016719980994821526
+Step 24550, Loss: 3.4984354972839355
+Time taken for step: 0.010326164003345184
+Step 24600, Loss: 3.2539777755737305
+Time taken for step: 0.016256189002888277
+Step 24650, Loss: 3.417736053466797
+Time taken for step: 0.015964938997058198
+Step 24700, Loss: 2.548502206802368
+Time taken for step: 0.016796162992250174
+Step 24750, Loss: 3.7331860065460205
+Time taken for step: 0.01643421199696604
+Step 24800, Loss: 3.682663917541504
+Time taken for step: 0.016889196005649865
+Step 24850, Loss: 2.8672423362731934
+Time taken for step: 0.01640398999734316
+Step 24900, Loss: 3.9926021099090576
+Time taken for step: 0.015937266987748444
+Step 24950, Loss: 3.7424862384796143
+Time taken for step: 0.01623558599385433
+Step 25000, Loss: 3.4729983806610107
+Time taken for step: 0.016795347997685894
+Saving params...
+Params saved.
+Step 25050, Loss: 2.493863582611084
+Time taken for step: 0.016632911007036455
+Step 25100, Loss: 3.6287341117858887
+Time taken for step: 0.015949206994264387
+Step 25150, Loss: 3.7907304763793945
+Time taken for step: 0.016618345995084383
+Step 25200, Loss: 3.8065404891967773
+Time taken for step: 0.017044895997969434
+Step 25250, Loss: 2.5404396057128906
+Time taken for step: 0.016592203988693655
+Step 25300, Loss: 2.7107298374176025
+Time taken for step: 0.016644735995214432
+Step 25350, Loss: 2.596653938293457
+Time taken for step: 0.016481123006087728
+Step 25400, Loss: 3.635835886001587
+Time taken for step: 0.016476917997351848
+Step 25450, Loss: 3.4288852214813232
+Time taken for step: 0.01645103099872358
+Step 25500, Loss: 2.348623275756836
+Time taken for step: 0.01694010400387924
+Step 25550, Loss: 3.6440770626068115
+Time taken for step: 0.01726817400776781
+Step 25600, Loss: 3.2100207805633545
+Time taken for step: 0.01658019400201738
+Step 25650, Loss: 2.92004132270813
+Time taken for step: 0.01660708399140276
+Step 25700, Loss: 3.0798070430755615
+Time taken for step: 0.014966021000873297
+Step 25750, Loss: 3.552467107772827
+Time taken for step: 0.016541272998438217
+Step 25800, Loss: 3.6299004554748535
+Time taken for step: 0.016189454996492714
+Step 25850, Loss: 2.603684425354004
+Time taken for step: 0.016212307004025206
+Step 25900, Loss: 3.1771585941314697
+Time taken for step: 0.015919458004646003
+Step 25950, Loss: 3.5744495391845703
+Time taken for step: 0.016795675008324906
+Step 26000, Loss: 3.027873992919922
+Time taken for step: 0.01578906600479968
+Saving params...
+Params saved.
+Step 26050, Loss: 3.4763784408569336
+Time taken for step: 0.016308724996633828
+Step 26100, Loss: 2.920393228530884
+Time taken for step: 0.016577875998336822
+Step 26150, Loss: 3.503159761428833
+Time taken for step: 0.015319475991418585
+Step 26200, Loss: 2.5840935707092285
+Time taken for step: 0.016351869999198243
+Step 26250, Loss: 2.716603994369507
+Time taken for step: 0.016508818996953778
+Step 26300, Loss: 3.1039702892303467
+Time taken for step: 0.015363365004304796
+Step 26350, Loss: 2.4166932106018066
+Time taken for step: 0.014859371003694832
+Step 26400, Loss: 3.859888792037964
+Time taken for step: 0.01624655599880498
+Step 26450, Loss: 2.842829704284668
+Time taken for step: 0.017097814998123795
+Step 26500, Loss: 3.7135608196258545
+Time taken for step: 0.016686114002368413
+Step 26550, Loss: 3.6785097122192383
+Time taken for step: 0.016512902002432384
+Step 26600, Loss: 3.624729633331299
+Time taken for step: 0.017230924000614323
+Step 26650, Loss: 3.691824436187744
+Time taken for step: 0.016597334994003177
+Step 26700, Loss: 2.910330057144165
+Time taken for step: 0.01646864200301934
+Step 26750, Loss: 3.8936169147491455
+Time taken for step: 0.016952040008618496
+Step 26800, Loss: 3.2094295024871826
+Time taken for step: 0.01572591401054524
+Step 26850, Loss: 3.5258562564849854
+Time taken for step: 0.011225629001273774
+Step 26900, Loss: 3.491136074066162
+Time taken for step: 0.016475242999149486
+Step 26950, Loss: 3.4632227420806885
+Time taken for step: 0.016782559992861934
+Step 27000, Loss: 3.562838315963745
+Time taken for step: 0.016423124994616956
+Saving params...
+Params saved.
+Step 27050, Loss: 3.623724937438965
+Time taken for step: 0.016220026998780668
+Step 27100, Loss: 3.6090729236602783
+Time taken for step: 0.016341944006853737
+Step 27150, Loss: 2.5078136920928955
+Time taken for step: 0.016369159013265744
+Step 27200, Loss: 3.466876983642578
+Time taken for step: 0.015968042993335985
+Step 27250, Loss: 2.7120213508605957
+Time taken for step: 0.01664640499802772
+Step 27300, Loss: 2.8346807956695557
+Time taken for step: 0.016541738994419575
+Step 27350, Loss: 3.4226274490356445
+Time taken for step: 0.016624664000119083
+Step 27400, Loss: 2.7549474239349365
+Time taken for step: 0.01631864398950711
+Step 27450, Loss: 3.7270572185516357
+Time taken for step: 0.016200234997086227
+Step 27500, Loss: 2.5090253353118896
+Time taken for step: 0.016745664994232357
+Step 27550, Loss: 3.343339204788208
+Time taken for step: 0.016120027998113073
+Step 27600, Loss: 2.769029140472412
+Time taken for step: 0.016312842999468558
+Step 27650, Loss: 3.10451078414917
+Time taken for step: 0.015603603009367362
+Step 27700, Loss: 3.394174337387085
+Time taken for step: 0.012697455997113138
+Step 27750, Loss: 3.5131795406341553
+Time taken for step: 0.016332487008185126
+Step 27800, Loss: 2.5324392318725586
+Time taken for step: 0.01617485699534882
+Step 27850, Loss: 3.459033489227295
+Time taken for step: 0.016457303005154245
+Step 27900, Loss: 3.2279741764068604
+Time taken for step: 0.015819302992895246
+Step 27950, Loss: 2.785348653793335
+Time taken for step: 0.010367915994720533
+Step 28000, Loss: 3.4104621410369873
+Time taken for step: 0.013901365993660875
+Saving params...
+Params saved.
+Step 28050, Loss: 3.5475893020629883
+Time taken for step: 0.016608799007372
+Step 28100, Loss: 2.6681220531463623
+Time taken for step: 0.01669041599961929
+Step 28150, Loss: 3.0898098945617676
+Time taken for step: 0.01637579599628225
+Step 28200, Loss: 3.46225905418396
+Time taken for step: 0.017488348996266723
+Step 28250, Loss: 3.527597665786743
+Time taken for step: 0.016193019997444935
+Step 28300, Loss: 3.078944206237793
+Time taken for step: 0.01351652599987574
+Step 28350, Loss: 3.3128654956817627
+Time taken for step: 0.016355543993995525
+Step 28400, Loss: 2.859741449356079
+Time taken for step: 0.01643992800381966
+Step 28450, Loss: 3.44598650932312
+Time taken for step: 0.016907761004404165
+Step 28500, Loss: 2.9579691886901855
+Time taken for step: 0.015716131994850002
+Step 28550, Loss: 2.3782994747161865
+Time taken for step: 0.01698817299620714
+Step 28600, Loss: 3.2013583183288574
+Time taken for step: 0.01642246200935915
+Step 28650, Loss: 3.540870428085327
+Time taken for step: 0.016573038010392338
+Step 28700, Loss: 3.401928424835205
+Time taken for step: 0.016574835011851974
+Step 28750, Loss: 2.940809965133667
+Time taken for step: 0.017832333003752865
+Step 28800, Loss: 2.531677007675171
+Time taken for step: 0.016207675987971015
+Step 28850, Loss: 3.3206207752227783
+Time taken for step: 0.015726240002550185
+Step 28900, Loss: 3.7813596725463867
+Time taken for step: 0.016239550997852348
+Step 28950, Loss: 3.4747495651245117
+Time taken for step: 0.016835472008096986
+Step 29000, Loss: 3.5826966762542725
+Time taken for step: 0.017128188002971
+Saving params...
+Params saved.
+Step 29050, Loss: 2.7309112548828125
+Time taken for step: 0.016657576998113655
+Step 29100, Loss: 3.7331230640411377
+Time taken for step: 0.016804982005851343
+Step 29150, Loss: 3.1359777450561523
+Time taken for step: 0.016111062999698333
+Step 29200, Loss: 2.942085027694702
+Time taken for step: 0.016080485002021305
+Step 29250, Loss: 3.4383280277252197
+Time taken for step: 0.016312317005940713
+Step 29300, Loss: 3.5598978996276855
+Time taken for step: 0.016161967010702938
+Step 29350, Loss: 2.4540042877197266
+Time taken for step: 0.01718990800145548
+Step 29400, Loss: 3.2270121574401855
+Time taken for step: 0.016269718995317817
+Step 29450, Loss: 3.358630418777466
+Time taken for step: 0.015997904003597796
+Step 29500, Loss: 3.4808759689331055
+Time taken for step: 0.015687431005062535
+Step 29550, Loss: 3.6365785598754883
+Time taken for step: 0.01658077200409025
+Step 29600, Loss: 3.037123203277588
+Time taken for step: 0.01411734901193995
+Step 29650, Loss: 2.6319541931152344
+Time taken for step: 0.01650194000103511
+Step 29700, Loss: 3.7465267181396484
+Time taken for step: 0.01643402100307867
+Step 29750, Loss: 3.356081247329712
+Time taken for step: 0.014830693995463662
+Step 29800, Loss: 2.7001194953918457
+Time taken for step: 0.01682923099724576
+Step 29850, Loss: 3.5987212657928467
+Time taken for step: 0.016916980006499216
+Step 29900, Loss: 2.5745227336883545
+Time taken for step: 0.01665593900543172
+Step 29950, Loss: 3.2820160388946533
+Time taken for step: 0.013894620002247393
+Step 30000, Loss: 2.5368547439575195
+Time taken for step: 0.01667172199813649
+Saving params...
+Params saved.
+Step 30050, Loss: 3.5360586643218994
+Time taken for step: 0.017035366006894037
+Step 30100, Loss: 3.0892887115478516
+Time taken for step: 0.01562119199661538
+Step 30150, Loss: 2.6691367626190186
+Time taken for step: 0.016703753994079307
+Step 30200, Loss: 2.5807344913482666
+Time taken for step: 0.016613415005849674
+Step 30250, Loss: 3.7291760444641113
+Time taken for step: 0.016729091003071517
+Step 30300, Loss: 3.3788881301879883
+Time taken for step: 0.016710347001207992
+Step 30350, Loss: 2.4814624786376953
+Time taken for step: 0.01671005399839487
+Step 30400, Loss: 2.68361759185791
+Time taken for step: 0.017114342990680598
+Step 30450, Loss: 3.3345861434936523
+Time taken for step: 0.017087058004108258
+Step 30500, Loss: 2.393503427505493
+Time taken for step: 0.01638080099655781
+Step 30550, Loss: 3.7465968132019043
+Time taken for step: 0.017072444999939762
+Step 30600, Loss: 3.3617656230926514
+Time taken for step: 0.01600067300023511
+Step 30650, Loss: 3.400753974914551
+Time taken for step: 0.016565088997595012
+Step 30700, Loss: 3.1964259147644043
+Time taken for step: 0.016309914004523307
+Step 30750, Loss: 3.41447114944458
+Time taken for step: 0.016344375006156042
+Step 30800, Loss: 3.679913282394409
+Time taken for step: 0.016978183994069695
+Step 30850, Loss: 3.1709823608398438
+Time taken for step: 0.01436451000336092
+Step 30900, Loss: 3.180145502090454
+Time taken for step: 0.009879946010187268
+Step 30950, Loss: 2.489267587661743
+Time taken for step: 0.01656952798657585
+Step 31000, Loss: 2.6696808338165283
+Time taken for step: 0.015614169009495527
+Saving params...
+Params saved.
+Step 31050, Loss: 3.705157518386841
+Time taken for step: 0.016128239993122406
+Step 31100, Loss: 3.115356683731079
+Time taken for step: 0.015335528005380183
+Step 31150, Loss: 2.773130178451538
+Time taken for step: 0.016574790992308408
+Step 31200, Loss: 3.6350021362304688
+Time taken for step: 0.016435092999017797
+Step 31250, Loss: 2.7908473014831543
+Time taken for step: 0.016199243007577024
+Step 31300, Loss: 2.5995888710021973
+Time taken for step: 0.016687923998688348
+Step 31350, Loss: 3.0826518535614014
+Time taken for step: 0.014725660003023222
+Step 31400, Loss: 3.7696540355682373
+Time taken for step: 0.016300235001835972
+Step 31450, Loss: 2.775984764099121
+Time taken for step: 0.014995200996054336
+Step 31500, Loss: 3.4087677001953125
+Time taken for step: 0.015861317995586433
+Step 31550, Loss: 2.959320068359375
+Time taken for step: 0.014836400005151518
+Step 31600, Loss: 2.8626651763916016
+Time taken for step: 0.017706598999211565
+Step 31650, Loss: 3.4076361656188965
+Time taken for step: 0.0164609959902009
+Step 31700, Loss: 2.4184556007385254
+Time taken for step: 0.016854742003488354
+Step 31750, Loss: 3.6147284507751465
+Time taken for step: 0.01641619499423541
+Step 31800, Loss: 3.6125500202178955
+Time taken for step: 0.01598470199678559
+Step 31850, Loss: 2.6020939350128174
+Time taken for step: 0.01715545500337612
+Step 31900, Loss: 2.95859694480896
+Time taken for step: 0.01633731700712815
+Step 31950, Loss: 3.3338570594787598
+Time taken for step: 0.016671103992848657
+Step 32000, Loss: 2.7991881370544434
+Time taken for step: 0.016211576003115624
+Saving params...
+Params saved.
+Step 32050, Loss: 3.511866331100464
+Time taken for step: 0.016275985006359406
+Step 32100, Loss: 3.5574231147766113
+Time taken for step: 0.013688004997675307
+Step 32150, Loss: 2.703918695449829
+Time taken for step: 0.016206411994062364
+Step 32200, Loss: 3.269090175628662
+Time taken for step: 0.01668735599378124
+Step 32250, Loss: 3.6952743530273438
+Time taken for step: 0.016875549001269974
+Step 32300, Loss: 3.6283488273620605
+Time taken for step: 0.01679745600267779
+Step 32350, Loss: 3.4140732288360596
+Time taken for step: 0.016202961996896192
+Step 32400, Loss: 3.2554495334625244
+Time taken for step: 0.01687271799892187
+Step 32450, Loss: 3.4285895824432373
+Time taken for step: 0.016497449003509246
+Step 32500, Loss: 2.7943003177642822
+Time taken for step: 0.01663217799796257
+Step 32550, Loss: 3.6679165363311768
+Time taken for step: 0.017349932008073665
+Step 32600, Loss: 2.556849479675293
+Time taken for step: 0.01644224498886615
+Step 32650, Loss: 3.718740701675415
+Time taken for step: 0.016255690992693417
+Step 32700, Loss: 3.611581802368164
+Time taken for step: 0.015376336014014669
+Step 32750, Loss: 2.386061191558838
+Time taken for step: 0.015661048993933946
+Step 32800, Loss: 3.444620370864868
+Time taken for step: 0.016963739006314427
+Step 32850, Loss: 3.646575927734375
+Time taken for step: 0.016496928001288325
+Step 32900, Loss: 2.71079683303833
+Time taken for step: 0.017091597997932695
+Step 32950, Loss: 2.8692262172698975
+Time taken for step: 0.016431263997219503
+Step 33000, Loss: 2.8702332973480225
+Time taken for step: 0.01599388300382998
+Saving params...
+Params saved.
+Step 33050, Loss: 2.6570584774017334
+Time taken for step: 0.01659871099400334
+Step 33100, Loss: 3.215916872024536
+Time taken for step: 0.01599058099964168
+Step 33150, Loss: 3.3875679969787598
+Time taken for step: 0.01596847499604337
+Step 33200, Loss: 2.647747755050659
+Time taken for step: 0.01623842200206127
+Step 33250, Loss: 2.4911885261535645
+Time taken for step: 0.0172040979960002
+Step 33300, Loss: 2.9615514278411865
+Time taken for step: 0.016179596990696155
+Step 33350, Loss: 2.6718859672546387
+Time taken for step: 0.016606899996986613
+Step 33400, Loss: 3.2540225982666016
+Time taken for step: 0.016318452995619737
+Step 33450, Loss: 3.615992307662964
+Time taken for step: 0.016522557998541743
+Step 33500, Loss: 3.13749098777771
+Time taken for step: 0.016658349995850585
+Step 33550, Loss: 3.6571860313415527
+Time taken for step: 0.016508489003172144
+Step 33600, Loss: 3.3914456367492676
+Time taken for step: 0.016857886002981104
+Step 33650, Loss: 2.8947362899780273
+Time taken for step: 0.015779507011757232
+Step 33700, Loss: 2.4143123626708984
+Time taken for step: 0.017068578992621042
+Step 33750, Loss: 2.822530746459961
+Time taken for step: 0.016503663995536044
+Step 33800, Loss: 2.7978687286376953
+Time taken for step: 0.0174788529984653
+Step 33850, Loss: 2.412022829055786
+Time taken for step: 0.012823729004594497
+Step 33900, Loss: 3.256474733352661
+Time taken for step: 0.0165835569932824
+Step 33950, Loss: 3.2119133472442627
+Time taken for step: 0.017473118990892544
+Step 34000, Loss: 3.040088176727295
+Time taken for step: 0.015638626005966216
+Saving params...
+Params saved.
+Step 34050, Loss: 3.163832187652588
+Time taken for step: 0.016424799992819317
+Step 34100, Loss: 3.3174288272857666
+Time taken for step: 0.01571575499838218
+Step 34150, Loss: 3.5189075469970703
+Time taken for step: 0.016807906999019906
+Step 34200, Loss: 3.469994068145752
+Time taken for step: 0.016254617003141902
+Step 34250, Loss: 3.4266040325164795
+Time taken for step: 0.01668780700128991
+Step 34300, Loss: 2.787168025970459
+Time taken for step: 0.016561152995564044
+Step 34350, Loss: 3.2428760528564453
+Time taken for step: 0.016521173994988203
+Step 34400, Loss: 2.692878484725952
+Time taken for step: 0.016609513986622915
+Step 34450, Loss: 2.4230198860168457
+Time taken for step: 0.016766296001151204
+Step 34500, Loss: 2.610957145690918
+Time taken for step: 0.017001871994580142
+Step 34550, Loss: 3.282921314239502
+Time taken for step: 0.01703393700881861
+Step 34600, Loss: 3.4556286334991455
+Time taken for step: 0.01615032799600158
+Step 34650, Loss: 2.4625697135925293
+Time taken for step: 0.016860175994224846
+Step 34700, Loss: 2.7327330112457275
+Time taken for step: 0.01598719900357537
+Step 34750, Loss: 3.4559926986694336
+Time taken for step: 0.016709838004317135
+Step 34800, Loss: 3.6113975048065186
+Time taken for step: 0.017104193990235217
+Step 34850, Loss: 2.5863194465637207
+Time taken for step: 0.017127344995969906
+Step 34900, Loss: 3.72379994392395
+Time taken for step: 0.016784608000307344
+Step 34950, Loss: 3.3838322162628174
+Time taken for step: 0.016598397007328458
+Step 35000, Loss: 2.7860443592071533
+Time taken for step: 0.017009885996230878
+Saving params...
+Params saved.
+Step 35050, Loss: 2.6653895378112793
+Time taken for step: 0.016304901000694372
+Step 35100, Loss: 3.6903159618377686
+Time taken for step: 0.017285769994487055
+Step 35150, Loss: 3.256896734237671
+Time taken for step: 0.016967461997410282
+Step 35200, Loss: 3.5460290908813477
+Time taken for step: 0.016580786992562935
+Step 35250, Loss: 3.0694568157196045
+Time taken for step: 0.015708250008174218
+Step 35300, Loss: 2.9859251976013184
+Time taken for step: 0.015536641993094236
+Step 35350, Loss: 3.3831958770751953
+Time taken for step: 0.016822145000332966
+Step 35400, Loss: 2.683302640914917
+Time taken for step: 0.01575452199904248
+Step 35450, Loss: 2.4099926948547363
+Time taken for step: 0.016453131989692338
+Step 35500, Loss: 2.813917398452759
+Time taken for step: 0.016363465998438187
+Step 35550, Loss: 3.0147478580474854
+Time taken for step: 0.01624169798742514
+Step 35600, Loss: 2.8563809394836426
+Time taken for step: 0.01706695300526917
+Step 35650, Loss: 3.310525417327881
+Time taken for step: 0.015129773004446179
+Step 35700, Loss: 2.759704351425171
+Time taken for step: 0.014876518995151855
+Step 35750, Loss: 3.438805103302002
+Time taken for step: 0.0165622640051879
+Step 35800, Loss: 2.826686143875122
+Time taken for step: 0.01678046899905894
+Step 35850, Loss: 2.3934667110443115
+Time taken for step: 0.014440295009990223
+Step 35900, Loss: 3.5365989208221436
+Time taken for step: 0.016442280990304425
+Step 35950, Loss: 2.9965693950653076
+Time taken for step: 0.01585882499057334
+Step 36000, Loss: 3.3456499576568604
+Time taken for step: 0.016337413995643146
+Saving params...
+Params saved.
+Step 36050, Loss: 2.2423670291900635
+Time taken for step: 0.01737204000528436
+Step 36100, Loss: 2.8556835651397705
+Time taken for step: 0.013662056997418404
+Step 36150, Loss: 2.959808111190796
+Time taken for step: 0.016749492002418265
+Step 36200, Loss: 2.302234172821045
+Time taken for step: 0.01641217400901951
+Step 36250, Loss: 3.5833182334899902
+Time taken for step: 0.016705375994206406
+Step 36300, Loss: 2.600278377532959
+Time taken for step: 0.01671466299740132
+Step 36350, Loss: 3.580683469772339
+Time taken for step: 0.016444767999928445
+Step 36400, Loss: 3.596801519393921
+Time taken for step: 0.016272150998702273
+Step 36450, Loss: 3.5483827590942383
+Time taken for step: 0.016303950003930368
+Step 36500, Loss: 3.5103588104248047
+Time taken for step: 0.01704251000774093
+Step 36550, Loss: 2.9182450771331787
+Time taken for step: 0.014224227998056449
+Step 36600, Loss: 3.042232036590576
+Time taken for step: 0.016779261000920087
+Step 36650, Loss: 3.270747184753418
+Time taken for step: 0.01610710700333584
+Step 36700, Loss: 2.5573160648345947
+Time taken for step: 0.016269219006062485
+Step 36750, Loss: 3.04842209815979
+Time taken for step: 0.015916579999611713
+Step 36800, Loss: 2.6097915172576904
+Time taken for step: 0.0168488359922776
+Step 36850, Loss: 2.350797176361084
+Time taken for step: 0.016518504999112338
+Step 36900, Loss: 3.5684852600097656
+Time taken for step: 0.016764646003139205
+Step 36950, Loss: 3.418990135192871
+Time taken for step: 0.01620584800548386
+Step 37000, Loss: 2.6851940155029297
+Time taken for step: 0.015483472001506016
+Saving params...
+Params saved.
+Step 37050, Loss: 3.4356980323791504
+Time taken for step: 0.015062056001625024
+Step 37100, Loss: 2.818286657333374
+Time taken for step: 0.015587010013405234
+Step 37150, Loss: 3.3748717308044434
+Time taken for step: 0.01643971199519001
+Step 37200, Loss: 2.345844268798828
+Time taken for step: 0.016918108012760058
+Step 37250, Loss: 2.405884027481079
+Time taken for step: 0.01710078801261261
+Step 37300, Loss: 2.3631207942962646
+Time taken for step: 0.016729135997593403
+Step 37350, Loss: 3.1142210960388184
+Time taken for step: 0.01646647999587003
+Step 37400, Loss: 3.446531295776367
+Time taken for step: 0.015532310993876308
+Step 37450, Loss: 2.321493148803711
+Time taken for step: 0.016336668995791115
+Step 37500, Loss: 2.8748247623443604
+Time taken for step: 0.016057949003879912
+Step 37550, Loss: 3.391134738922119
+Time taken for step: 0.016880297000170685
+Step 37600, Loss: 2.6276111602783203
+Time taken for step: 0.016813203008496203
+Step 37650, Loss: 3.660046339035034
+Time taken for step: 0.01696008500584867
+Step 37700, Loss: 2.771919012069702
+Time taken for step: 0.01632294298906345
+Step 37750, Loss: 2.916247606277466
+Time taken for step: 0.01567977000377141
+Step 37800, Loss: 2.8108251094818115
+Time taken for step: 0.0165232089930214
+Step 37850, Loss: 3.3980255126953125
+Time taken for step: 0.015361023004516028
+Step 37900, Loss: 3.1956706047058105
+Time taken for step: 0.01739214100234676
+Step 37950, Loss: 3.306694984436035
+Time taken for step: 0.01685003899910953
+Step 38000, Loss: 2.693366765975952
+Time taken for step: 0.0149392879975494
+Saving params...
+Params saved.
+Step 38050, Loss: 2.142273187637329
+Time taken for step: 0.017024318003677763
+Step 38100, Loss: 3.1768240928649902
+Time taken for step: 0.016666459996486083
+Step 38150, Loss: 2.3180038928985596
+Time taken for step: 0.016757441000663675
+Step 38200, Loss: 2.4162333011627197
+Time taken for step: 0.01723817500169389
+Step 38250, Loss: 3.4307475090026855
+Time taken for step: 0.016861522002727725
+Step 38300, Loss: 2.7871346473693848
+Time taken for step: 0.01555744199140463
+Step 38350, Loss: 3.0375733375549316
+Time taken for step: 0.015471288992557675
+Step 38400, Loss: 2.385927438735962
+Time taken for step: 0.01695921999635175
+Step 38450, Loss: 2.383298397064209
+Time taken for step: 0.016651855999953113
+Step 38500, Loss: 3.3270182609558105
+Time taken for step: 0.01641291900887154
+Step 38550, Loss: 3.3524975776672363
+Time taken for step: 0.016820249002194032
+Step 38600, Loss: 3.393615961074829
+Time taken for step: 0.01698039600159973
+Step 38650, Loss: 2.3493242263793945
+Time taken for step: 0.016809131993795745
+Step 38700, Loss: 3.4122133255004883
+Time taken for step: 0.017290112999035046
+Step 38750, Loss: 3.291553497314453
+Time taken for step: 0.01667994099261705
+Step 38800, Loss: 3.3936891555786133
+Time taken for step: 0.016568335995543748
+Step 38850, Loss: 3.278893232345581
+Time taken for step: 0.01645760099927429
+Step 38900, Loss: 2.8076491355895996
+Time taken for step: 0.015326382999774069
+Step 38950, Loss: 2.4913787841796875
+Time taken for step: 0.013965777005068958
+Step 39000, Loss: 3.060633659362793
+Time taken for step: 0.01532143801159691
+Saving params...
+Params saved.
+Step 39050, Loss: 2.2929184436798096
+Time taken for step: 0.01660199101024773
+Step 39100, Loss: 2.5511019229888916
+Time taken for step: 0.016452247989946045
+Step 39150, Loss: 2.309231758117676
+Time taken for step: 0.016975242004264146
+Step 39200, Loss: 3.192978858947754
+Time taken for step: 0.016626697994070128
+Step 39250, Loss: 3.059990882873535
+Time taken for step: 0.016924761002883315
+Step 39300, Loss: 3.3139781951904297
+Time taken for step: 0.015766679993248545
+Step 39350, Loss: 3.272157669067383
+Time taken for step: 0.016414760990301147
+Step 39400, Loss: 3.535092353820801
+Time taken for step: 0.016432478005299345
+Step 39450, Loss: 2.727832317352295
+Time taken for step: 0.01555444901168812
+Step 39500, Loss: 3.263969898223877
+Time taken for step: 0.016377398002077825
+Step 39550, Loss: 2.768104076385498
+Time taken for step: 0.01720960201055277
+Step 39600, Loss: 3.2757205963134766
+Time taken for step: 0.0133830899867462
+Step 39650, Loss: 3.0297133922576904
+Time taken for step: 0.016633696999633685
+Step 39700, Loss: 3.1513140201568604
+Time taken for step: 0.015762148002977483
+Step 39750, Loss: 3.4062929153442383
+Time taken for step: 0.016218730990658514
+Step 39800, Loss: 3.1894290447235107
+Time taken for step: 0.016754094991483726
+Step 39850, Loss: 2.8286757469177246
+Time taken for step: 0.015152020001551136
+Step 39900, Loss: 3.4235823154449463
+Time taken for step: 0.01672246100497432
+Step 39950, Loss: 3.4735305309295654
+Time taken for step: 0.01633094300632365
+Step 40000, Loss: 2.7650883197784424
+Time taken for step: 0.01559319399530068
+Saving params...
+Params saved.
+Step 40050, Loss: 3.196669816970825
+Time taken for step: 0.016497222997713834
+Step 40100, Loss: 2.573066473007202
+Time taken for step: 0.01641187800851185
+Step 40150, Loss: 2.2883987426757812
+Time taken for step: 0.01720484498946462
+Step 40200, Loss: 2.5794670581817627
+Time taken for step: 0.014967195005738176
+Step 40250, Loss: 2.570669651031494
+Time taken for step: 0.014977432001614943
+Step 40300, Loss: 3.7224578857421875
+Time taken for step: 0.016780211008153856
+Step 40350, Loss: 2.5131900310516357
+Time taken for step: 0.016252917994279414
+Step 40400, Loss: 3.2953803539276123
+Time taken for step: 0.016150354000274092
+Step 40450, Loss: 2.4523396492004395
+Time taken for step: 0.016287544000078924
+Step 40500, Loss: 3.7120771408081055
+Time taken for step: 0.017147272010333836
+Step 40550, Loss: 3.4627339839935303
+Time taken for step: 0.01681153499521315
+Step 40600, Loss: 3.130197763442993
+Time taken for step: 0.016201952996198088
+Step 40650, Loss: 2.3724710941314697
+Time taken for step: 0.01633518500602804
+Step 40700, Loss: 2.6872425079345703
+Time taken for step: 0.015799499989952892
+Step 40750, Loss: 2.181114435195923
+Time taken for step: 0.016738078003982082
+Step 40800, Loss: 3.2931854724884033
+Time taken for step: 0.016641638008877635
+Step 40850, Loss: 2.4820139408111572
+Time taken for step: 0.016731414012610912
+Step 40900, Loss: 3.162111759185791
+Time taken for step: 0.016319464004482143
+Step 40950, Loss: 2.676482677459717
+Time taken for step: 0.01701109399436973
+Step 41000, Loss: 2.3631157875061035
+Time taken for step: 0.016491582995513454
+Saving params...
+Params saved.
+Step 41050, Loss: 3.1279397010803223
+Time taken for step: 0.016687110997736454
+Step 41100, Loss: 2.9578135013580322
+Time taken for step: 0.016185794986085966
+Step 41150, Loss: 3.352555990219116
+Time taken for step: 0.016508693996001966
+Step 41200, Loss: 2.2073748111724854
+Time taken for step: 0.017255842001759447
+Step 41250, Loss: 3.2113993167877197
+Time taken for step: 0.01683058099297341
+Step 41300, Loss: 3.2193496227264404
+Time taken for step: 0.015961483994033188
+Step 41350, Loss: 3.127424716949463
+Time taken for step: 0.01610983000136912
+Step 41400, Loss: 3.5167479515075684
+Time taken for step: 0.01665100500395056
+Step 41450, Loss: 2.2304699420928955
+Time taken for step: 0.01701472600689158
+Step 41500, Loss: 3.2880547046661377
+Time taken for step: 0.016704155001207255
+Step 41550, Loss: 2.458866834640503
+Time taken for step: 0.016727922004065476
+Step 41600, Loss: 2.624837875366211
+Time taken for step: 0.016120271990075707
+Step 41650, Loss: 2.5479233264923096
+Time taken for step: 0.016488515990204178
+Step 41700, Loss: 3.1586949825286865
+Time taken for step: 0.016737857993575744
+Step 41750, Loss: 3.641566514968872
+Time taken for step: 0.016439831000752747
+Step 41800, Loss: 2.4002163410186768
+Time taken for step: 0.01679903399781324
+Step 41850, Loss: 3.051990509033203
+Time taken for step: 0.01501734700286761
+Step 41900, Loss: 3.1964683532714844
+Time taken for step: 0.016763132996857166
+Step 41950, Loss: 2.1743223667144775
+Time taken for step: 0.016498169003170915
+Step 42000, Loss: 3.1072475910186768
+Time taken for step: 0.017002637003315613
+Saving params...
+Params saved.
+Step 42050, Loss: 2.4957473278045654
+Time taken for step: 0.016711660005967133
+Step 42100, Loss: 3.6230156421661377
+Time taken for step: 0.016013439002563246
+Step 42150, Loss: 3.1615703105926514
+Time taken for step: 0.014482501996099018
+Step 42200, Loss: 2.890829563140869
+Time taken for step: 0.014862572003039531
+Step 42250, Loss: 2.512681484222412
+Time taken for step: 0.017034743999829516
+Step 42300, Loss: 3.4115519523620605
+Time taken for step: 0.01694484600739088
+Step 42350, Loss: 3.448049783706665
+Time taken for step: 0.01677097899664659
+Step 42400, Loss: 2.6451354026794434
+Time taken for step: 0.01608724299876485
+Step 42450, Loss: 2.890799045562744
+Time taken for step: 0.01722963601059746
+Step 42500, Loss: 2.2870125770568848
+Time taken for step: 0.01687985600437969
+Step 42550, Loss: 2.6057286262512207
+Time taken for step: 0.016593027001363225
+Step 42600, Loss: 2.7751853466033936
+Time taken for step: 0.015361837009550072
+Step 42650, Loss: 2.6439132690429688
+Time taken for step: 0.015007427005912177
+Step 42700, Loss: 2.6660525798797607
+Time taken for step: 0.014984205001383089
+Step 42750, Loss: 3.2085132598876953
+Time taken for step: 0.01626964399474673
+Step 42800, Loss: 2.1099469661712646
+Time taken for step: 0.01656134400400333
+Step 42850, Loss: 2.804452419281006
+Time taken for step: 0.01598108100006357
+Step 42900, Loss: 3.213683843612671
+Time taken for step: 0.016572849999647588
+Step 42950, Loss: 3.274693727493286
+Time taken for step: 0.016897002002224326
+Step 43000, Loss: 3.167943239212036
+Time taken for step: 0.016717360995244235
+Saving params...
+Params saved.
+Step 43050, Loss: 2.7864468097686768
+Time taken for step: 0.015716415000497364
+Step 43100, Loss: 2.665651798248291
+Time taken for step: 0.015222961999825202
+Step 43150, Loss: 3.1450681686401367
+Time taken for step: 0.01680796999426093
+Step 43200, Loss: 3.3731188774108887
+Time taken for step: 0.015715685003669932
+Step 43250, Loss: 2.311337947845459
+Time taken for step: 0.0168289220018778
+Step 43300, Loss: 3.370635986328125
+Time taken for step: 0.016676052997354418
+Step 43350, Loss: 2.7993345260620117
+Time taken for step: 0.01593405099993106
+Step 43400, Loss: 3.15626859664917
+Time taken for step: 0.017033328011166304
+Step 43450, Loss: 3.0167038440704346
+Time taken for step: 0.01601275500433985
+Step 43500, Loss: 2.6526756286621094
+Time taken for step: 0.016711846998077817
+Step 43550, Loss: 2.3938724994659424
+Time taken for step: 0.01713753399963025
+Step 43600, Loss: 2.3820905685424805
+Time taken for step: 0.01680335598939564
+Step 43650, Loss: 2.781269073486328
+Time taken for step: 0.0154979170038132
+Step 43700, Loss: 2.9035229682922363
+Time taken for step: 0.01606719198753126
+Step 43750, Loss: 2.205430507659912
+Time taken for step: 0.01740315700590145
+Step 43800, Loss: 3.5550267696380615
+Time taken for step: 0.016838774987263605
+Step 43850, Loss: 2.335587501525879
+Time taken for step: 0.016259789001196623
+Step 43900, Loss: 3.077333688735962
+Time taken for step: 0.016826407998451032
+Step 43950, Loss: 3.1321732997894287
+Time taken for step: 0.01624586399702821
+Step 44000, Loss: 3.2547271251678467
+Time taken for step: 0.015710779989603907
+Saving params...
+Params saved.
+Step 44050, Loss: 3.4643993377685547
+Time taken for step: 0.017105969993281178
+Step 44100, Loss: 3.16219425201416
+Time taken for step: 0.016423914988990873
+Step 44150, Loss: 2.9254310131073
+Time taken for step: 0.01658270601183176
+Step 44200, Loss: 2.8836779594421387
+Time taken for step: 0.016913494997425005
+Step 44250, Loss: 2.7612507343292236
+Time taken for step: 0.01496644999133423
+Step 44300, Loss: 2.607923984527588
+Time taken for step: 0.016317142988555133
+Step 44350, Loss: 3.163778305053711
+Time taken for step: 0.016806626998004504
+Step 44400, Loss: 2.4973196983337402
+Time taken for step: 0.01657837600214407
+Step 44450, Loss: 2.7917463779449463
+Time taken for step: 0.01649517400073819
+Step 44500, Loss: 3.3444125652313232
+Time taken for step: 0.016503554012160748
+Step 44550, Loss: 3.240238904953003
+Time taken for step: 0.016923517003306188
+Step 44600, Loss: 3.2864177227020264
+Time taken for step: 0.016596196990576573
+Step 44650, Loss: 2.973837375640869
+Time taken for step: 0.014379480009665713
+Step 44700, Loss: 2.7866814136505127
+Time taken for step: 0.016098432999569923
+Step 44750, Loss: 2.8453705310821533
+Time taken for step: 0.015155931003391743
+Step 44800, Loss: 2.998774528503418
+Time taken for step: 0.01587367100000847
+Step 44850, Loss: 2.4182732105255127
+Time taken for step: 0.01662043499527499
+Step 44900, Loss: 3.488806962966919
+Time taken for step: 0.015585617002216168
+Step 44950, Loss: 2.4680826663970947
+Time taken for step: 0.01614442199934274
+Step 45000, Loss: 2.6795520782470703
+Time taken for step: 0.015703851997386664
+Saving params...
+Params saved.
+Step 45050, Loss: 3.101358652114868
+Time taken for step: 0.01535654699546285
+Step 45100, Loss: 3.3302810192108154
+Time taken for step: 0.016623071001959033
+Step 45150, Loss: 2.2201902866363525
+Time taken for step: 0.01760961499530822
+Step 45200, Loss: 2.1572494506835938
+Time taken for step: 0.016715424004360102
+Step 45250, Loss: 3.0887012481689453
+Time taken for step: 0.01642654799798038
+Step 45300, Loss: 2.930901050567627
+Time taken for step: 0.01568706399120856
+Step 45350, Loss: 3.6828832626342773
+Time taken for step: 0.01625763700576499
+Step 45400, Loss: 3.167160749435425
+Time taken for step: 0.016543374993489124
+Step 45450, Loss: 3.13384747505188
+Time taken for step: 0.01678894500946626
+Step 45500, Loss: 2.7256758213043213
+Time taken for step: 0.015877077006734908
+Step 45550, Loss: 2.85245418548584
+Time taken for step: 0.015659666998544708
+Step 45600, Loss: 3.308631420135498
+Time taken for step: 0.017133253990323283
+Step 45650, Loss: 2.2394206523895264
+Time taken for step: 0.017121195007348433
+Step 45700, Loss: 3.395395040512085
+Time taken for step: 0.016695576996426098
+Step 45750, Loss: 2.281747341156006
+Time taken for step: 0.016604990989435464
+Step 45800, Loss: 2.302400827407837
+Time taken for step: 0.016657538988511078
+Step 45850, Loss: 2.361638307571411
+Time taken for step: 0.01655234399368055
+Step 45900, Loss: 2.5152015686035156
+Time taken for step: 0.015998455011867918
+Step 45950, Loss: 3.3790087699890137
+Time taken for step: 0.016184416992473416
+Step 46000, Loss: 2.931347370147705
+Time taken for step: 0.016003892989829183
+Saving params...
+Params saved.
+Step 46050, Loss: 3.3238420486450195
+Time taken for step: 0.016429324008640833
+Step 46100, Loss: 3.1017065048217773
+Time taken for step: 0.016466044005937874
+Step 46150, Loss: 2.1798861026763916
+Time taken for step: 0.01648110299720429
+Step 46200, Loss: 3.1778430938720703
+Time taken for step: 0.016974098005448468
+Step 46250, Loss: 2.215066432952881
+Time taken for step: 0.016267920000245795
+Step 46300, Loss: 3.4174654483795166
+Time taken for step: 0.01614612599951215
+Step 46350, Loss: 2.432652711868286
+Time taken for step: 0.016548335988773033
+Step 46400, Loss: 3.2116174697875977
+Time taken for step: 0.013957447998109274
+Step 46450, Loss: 2.3148205280303955
+Time taken for step: 0.0163445679936558
+Step 46500, Loss: 2.6735308170318604
+Time taken for step: 0.016801815989310853
+Step 46550, Loss: 2.6644511222839355
+Time taken for step: 0.015536195001914166
+Step 46600, Loss: 2.3841071128845215
+Time taken for step: 0.016929075005464256
+Step 46650, Loss: 3.155806541442871
+Time taken for step: 0.0163945210078964
+Step 46700, Loss: 2.362116813659668
+Time taken for step: 0.0168040540011134
+Step 46750, Loss: 3.1025075912475586
+Time taken for step: 0.016846906990394928
+Step 46800, Loss: 2.6081349849700928
+Time taken for step: 0.015511342004174367
+Step 46850, Loss: 2.3980579376220703
+Time taken for step: 0.013698283000849187
+Step 46900, Loss: 2.8897135257720947
+Time taken for step: 0.015231365992804058
+Step 46950, Loss: 3.1119017601013184
+Time taken for step: 0.016170672999578528
+Step 47000, Loss: 3.22961163520813
+Time taken for step: 0.016320524999173358
+Saving params...
+Params saved.
+Step 47050, Loss: 2.457690715789795
+Time taken for step: 0.0167468230065424
+Step 47100, Loss: 3.0885887145996094
+Time taken for step: 0.016563023993512616
+Step 47150, Loss: 2.598419189453125
+Time taken for step: 0.013994036999065429
+Step 47200, Loss: 2.9714157581329346
+Time taken for step: 0.016240848999586888
+Step 47250, Loss: 2.5570881366729736
+Time taken for step: 0.015640390003682114
+Step 47300, Loss: 3.044581651687622
+Time taken for step: 0.016395697995903902
+Step 47350, Loss: 1.9934409856796265
+Time taken for step: 0.16717956999491435
+Step 47400, Loss: 2.642077922821045
+Time taken for step: 0.015828115996555425
+Step 47450, Loss: 2.3638641834259033
+Time taken for step: 0.01656779900076799
+Step 47500, Loss: 2.3888766765594482
+Time taken for step: 0.01633319299435243
+Step 47550, Loss: 3.1748409271240234
+Time taken for step: 0.01624510600231588
+Step 47600, Loss: 2.1330771446228027
+Time taken for step: 0.01688744999410119
+Step 47650, Loss: 3.076828956604004
+Time taken for step: 0.01666365000710357
+Step 47700, Loss: 2.500304937362671
+Time taken for step: 0.016817313997307792
+Step 47750, Loss: 2.2221415042877197
+Time taken for step: 0.01655892000417225
+Step 47800, Loss: 3.4166312217712402
+Time taken for step: 0.015091809997102246
+Step 47850, Loss: 3.050220489501953
+Time taken for step: 0.01671526399150025
+Step 47900, Loss: 3.115003824234009
+Time taken for step: 0.014442683008383028
+Step 47950, Loss: 2.64668869972229
+Time taken for step: 0.01569390700024087
+Step 48000, Loss: 3.3760783672332764
+Time taken for step: 0.016781383004854433
+Saving params...
+Params saved.
+Step 48050, Loss: 3.267108917236328
+Time taken for step: 0.016230291992542334
+Step 48100, Loss: 3.1513829231262207
+Time taken for step: 0.01669511100044474
+Step 48150, Loss: 3.358168125152588
+Time taken for step: 0.016441338011645712
+Step 48200, Loss: 2.5910511016845703
+Time taken for step: 0.01615021399629768
+Step 48250, Loss: 2.7351841926574707
+Time taken for step: 0.016369878008845262
+Step 48300, Loss: 3.3697118759155273
+Time taken for step: 0.015446682009496726
+Step 48350, Loss: 3.091360330581665
+Time taken for step: 0.01664205899578519
+Step 48400, Loss: 3.378023147583008
+Time taken for step: 0.0175861660100054
+Step 48450, Loss: 2.6376280784606934
+Time taken for step: 0.01585345399507787
+Step 48500, Loss: 2.5785250663757324
+Time taken for step: 0.016757142002461478
+Step 48550, Loss: 3.1069729328155518
+Time taken for step: 0.016160653001861647
+Step 48600, Loss: 3.316591262817383
+Time taken for step: 0.0162627980025718
+Step 48650, Loss: 2.207797050476074
+Time taken for step: 0.016738580001401715
+Step 48700, Loss: 3.1680238246917725
+Time taken for step: 0.01648643500811886
+Step 48750, Loss: 3.2454535961151123
+Time taken for step: 0.0166085969976848
+Step 48800, Loss: 2.254101514816284
+Time taken for step: 0.016331118997186422
+Step 48850, Loss: 2.2829179763793945
+Time taken for step: 0.01629734599555377
+Step 48900, Loss: 2.652688980102539
+Time taken for step: 0.016403927002102137
+Step 48950, Loss: 2.5120036602020264
+Time taken for step: 0.01594842699705623
+Step 49000, Loss: 2.0125226974487305
+Time taken for step: 0.016209463006816804
+Saving params...
+Params saved.
+Step 49050, Loss: 3.045170545578003
+Time taken for step: 0.017400573997292668
+Step 49100, Loss: 2.666546106338501
+Time taken for step: 0.01700769799936097
+Step 49150, Loss: 3.2553231716156006
+Time taken for step: 0.015404806996230036
+Step 49200, Loss: 3.16339373588562
+Time taken for step: 0.016530898996279575
+Step 49250, Loss: 3.2783639430999756
+Time taken for step: 0.01495977999002207
+Step 49300, Loss: 2.16243577003479
+Time taken for step: 0.016543431003810838
+Step 49350, Loss: 2.827000617980957
+Time taken for step: 0.01537909200123977
+Step 49400, Loss: 2.827178716659546
+Time taken for step: 0.015581719999318011
+Step 49450, Loss: 2.917898178100586
+Time taken for step: 0.01683081898954697
+Step 49500, Loss: 2.276729106903076
+Time taken for step: 0.01677671799552627
+Step 49550, Loss: 2.605353355407715
+Time taken for step: 0.016860393996466883
+Step 49600, Loss: 2.396531581878662
+Time taken for step: 0.017615977994864807
+Step 49650, Loss: 3.1786065101623535
+Time taken for step: 0.016440066989162005
+Step 49700, Loss: 2.607982873916626
+Time taken for step: 0.01591715100221336
+Step 49750, Loss: 3.300164222717285
+Time taken for step: 0.01695919901248999
+Step 49800, Loss: 3.0055954456329346
+Time taken for step: 0.016064101000665687
+Step 49850, Loss: 2.639230489730835
+Time taken for step: 0.016528256004676223
+Step 49900, Loss: 3.274007797241211
+Time taken for step: 0.016577201007748954
+Step 49950, Loss: 3.0246310234069824
+Time taken for step: 0.016567294995184056
+Step 50000, Loss: 3.4702107906341553
+Time taken for step: 0.017579227991518565
+Saving params...
+Params saved.
+Step 50050, Loss: 2.6454150676727295
+Time taken for step: 0.016081627996754833
+Step 50100, Loss: 2.7089951038360596
+Time taken for step: 0.01617006800370291
+Step 50150, Loss: 3.3358542919158936
+Time taken for step: 0.01680041699728463
+Step 50200, Loss: 2.2374069690704346
+Time taken for step: 0.01643554300244432
+Step 50250, Loss: 3.132319927215576
+Time taken for step: 0.016283243996440433
+Step 50300, Loss: 3.2631876468658447
+Time taken for step: 0.016635662992484868
+Step 50350, Loss: 2.3488471508026123
+Time taken for step: 0.016796569994767196
+Step 50400, Loss: 2.3525044918060303
+Time taken for step: 0.014465783999185078
+Step 50450, Loss: 2.9964475631713867
+Time taken for step: 0.016090107994386926
+Step 50500, Loss: 2.884399652481079
+Time taken for step: 0.016387087991461158
+Step 50550, Loss: 2.7430930137634277
+Time taken for step: 0.015752805993543006
+Step 50600, Loss: 3.096421718597412
+Time taken for step: 0.016164525994099677
+Step 50650, Loss: 3.155583620071411
+Time taken for step: 0.017148893006378785
+Step 50700, Loss: 3.4025864601135254
+Time taken for step: 0.016832277993671596
+Step 50750, Loss: 3.38450288772583
+Time taken for step: 0.016408269992098212
+Step 50800, Loss: 2.8734829425811768
+Time taken for step: 0.016946055999142118
+Step 50850, Loss: 2.925481081008911
+Time taken for step: 0.016689242998836562
+Step 50900, Loss: 3.152674674987793
+Time taken for step: 0.01615431699610781
+Step 50950, Loss: 2.2573471069335938
+Time taken for step: 0.015201529997284524
+Step 51000, Loss: 2.526959180831909
+Time taken for step: 0.01532453901018016
+Saving params...
+Params saved.
+Step 51050, Loss: 2.615780830383301
+Time taken for step: 0.016891177991055883
+Step 51100, Loss: 3.037693738937378
+Time taken for step: 0.016662761991028674
+Step 51150, Loss: 3.1630191802978516
+Time taken for step: 0.01679822799633257
+Step 51200, Loss: 2.362356662750244
+Time taken for step: 0.016638351997244172
+Step 51250, Loss: 2.173851490020752
+Time taken for step: 0.017192321000038646
+Step 51300, Loss: 3.293022632598877
+Time taken for step: 0.016994933001114987
+Step 51350, Loss: 2.937204122543335
+Time taken for step: 0.01656341199122835
+Step 51400, Loss: 3.307283639907837
+Time taken for step: 0.01285390299744904
+Step 51450, Loss: 3.189560890197754
+Time taken for step: 0.016112532990518957
+Step 51500, Loss: 3.1141443252563477
+Time taken for step: 0.01581838399579283
+Step 51550, Loss: 3.1853580474853516
+Time taken for step: 0.016292850006720982
+Step 51600, Loss: 2.9903616905212402
+Time taken for step: 0.016625909993308596
+Step 51650, Loss: 3.0323641300201416
+Time taken for step: 0.016975929000182077
+Step 51700, Loss: 2.6822292804718018
+Time taken for step: 0.016344614006811753
+Step 51750, Loss: 3.046937942504883
+Time taken for step: 0.014785080988076515
+Step 51800, Loss: 3.144796848297119
+Time taken for step: 0.016522721998626366
+Step 51850, Loss: 2.4001641273498535
+Time taken for step: 0.016726807996747084
+Step 51900, Loss: 2.974188804626465
+Time taken for step: 0.014474024006631225
+Step 51950, Loss: 3.0397722721099854
+Time taken for step: 0.016479903002618812
+Step 52000, Loss: 3.356626033782959
+Time taken for step: 0.016619658999843523
+Saving params...
+Params saved.
+Step 52050, Loss: 3.1983115673065186
+Time taken for step: 0.016712048003682867
+Step 52100, Loss: 2.257254123687744
+Time taken for step: 0.016492421011207625
+Step 52150, Loss: 2.425274610519409
+Time taken for step: 0.1699706190120196
+Step 52200, Loss: 2.9201912879943848
+Time taken for step: 0.016707321992726065
+Step 52250, Loss: 3.0447752475738525
+Time taken for step: 0.011188742995727807
+Step 52300, Loss: 2.400045871734619
+Time taken for step: 0.017220337002072483
+Step 52350, Loss: 2.2571823596954346
+Time taken for step: 0.01709218199539464
+Step 52400, Loss: 3.3127593994140625
+Time taken for step: 0.016011150990379974
+Step 52450, Loss: 2.459641933441162
+Time taken for step: 0.015265858004568145
+Step 52500, Loss: 2.398618698120117
+Time taken for step: 0.015523474998190068
+Step 52550, Loss: 2.328958511352539
+Time taken for step: 0.016067807999206707
+Step 52600, Loss: 2.965818166732788
+Time taken for step: 0.016773327995906584
+Step 52650, Loss: 3.1204304695129395
+Time taken for step: 0.016790559006039985
+Step 52700, Loss: 3.055912971496582
+Time taken for step: 0.0159199269983219
+Step 52750, Loss: 2.4729700088500977
+Time taken for step: 0.016326849989127368
+Step 52800, Loss: 3.1973819732666016
+Time taken for step: 0.016624630996375345
+Step 52850, Loss: 2.400865077972412
+Time taken for step: 0.016786293999757618
+Step 52900, Loss: 2.7028651237487793
+Time taken for step: 0.015826451999600977
+Step 52950, Loss: 2.9255928993225098
+Time taken for step: 0.01601402300002519
+Step 53000, Loss: 2.542001485824585
+Time taken for step: 0.015376137002022006
+Saving params...
+Params saved.
+Step 53050, Loss: 2.187030792236328
+Time taken for step: 0.01742441199894529
+Step 53100, Loss: 2.9694786071777344
+Time taken for step: 0.016209074994549155
+Step 53150, Loss: 2.381561517715454
+Time taken for step: 0.016760404003434815
+Step 53200, Loss: 2.5746495723724365
+Time taken for step: 0.016113657999085262
+Step 53250, Loss: 2.093277931213379
+Time taken for step: 0.015284461012925021
+Step 53300, Loss: 2.9864249229431152
+Time taken for step: 0.01596127600350883
+Step 53350, Loss: 3.22576642036438
+Time taken for step: 0.016325539007084444
+Step 53400, Loss: 1.9427244663238525
+Time taken for step: 0.016613932006293908
+Step 53450, Loss: 2.749377965927124
+Time taken for step: 0.01668846698885318
+Step 53500, Loss: 2.7993016242980957
+Time taken for step: 0.016497573000378907
+Step 53550, Loss: 3.304234504699707
+Time taken for step: 0.016478454999742098
+Step 53600, Loss: 2.9456787109375
+Time taken for step: 0.016394853009842336
+Step 53650, Loss: 2.439770460128784
+Time taken for step: 0.016076258005341515
+Step 53700, Loss: 3.219639778137207
+Time taken for step: 0.016438973005278967
+Step 53750, Loss: 2.3768069744110107
+Time taken for step: 0.01679164900269825
+Step 53800, Loss: 3.2505791187286377
+Time taken for step: 0.016540358992642723
+Step 53850, Loss: 2.6487340927124023
+Time taken for step: 0.016694560006726533
+Step 53900, Loss: 2.8012890815734863
+Time taken for step: 0.01653195300605148
+Step 53950, Loss: 2.694500207901001
+Time taken for step: 0.016713491000700742
+Step 54000, Loss: 3.1126933097839355
+Time taken for step: 0.016382200992666185
+Saving params...
+Params saved.
+Step 54050, Loss: 2.970996141433716
+Time taken for step: 0.016500554003869183
+Step 54100, Loss: 2.6801328659057617
+Time taken for step: 0.015564700996037573
+Step 54150, Loss: 2.868823528289795
+Time taken for step: 0.011056481002015062
+Step 54200, Loss: 3.0894463062286377
+Time taken for step: 0.015925572995911352
+Step 54250, Loss: 2.372925043106079
+Time taken for step: 0.016960957000264898
+Step 54300, Loss: 3.253655433654785
+Time taken for step: 0.01631437499599997
+Step 54350, Loss: 2.931710958480835
+Time taken for step: 0.01683922800293658
+Step 54400, Loss: 3.1987059116363525
+Time taken for step: 0.01725231400632765
+Step 54450, Loss: 2.457442283630371
+Time taken for step: 0.015780151006765664
+Step 54500, Loss: 2.8573663234710693
+Time taken for step: 0.015854354001930915
+Step 54550, Loss: 2.4463021755218506
+Time taken for step: 0.015563275999738835
+Step 54600, Loss: 3.4349536895751953
+Time taken for step: 0.01689334500406403
+Step 54650, Loss: 3.253736734390259
+Time taken for step: 0.016195975011214614
+Step 54700, Loss: 3.3049354553222656
+Time taken for step: 0.01665032700111624
+Step 54750, Loss: 2.2661468982696533
+Time taken for step: 0.017604214997845702
+Step 54800, Loss: 2.959282875061035
+Time taken for step: 0.01647459200466983
+Step 54850, Loss: 2.8951833248138428
+Time taken for step: 0.012931841003592126
+Step 54900, Loss: 3.1455161571502686
+Time taken for step: 0.016628208992187865
+Step 54950, Loss: 2.2118284702301025
+Time taken for step: 0.016679823995218612
+Step 55000, Loss: 2.496701240539551
+Time taken for step: 0.016242480007349513
+Saving params...
+Params saved.
+Step 55050, Loss: 2.4136948585510254
+Time taken for step: 0.015083122998476028
+Step 55100, Loss: 2.216827630996704
+Time taken for step: 0.015794790000654757
+Step 55150, Loss: 2.625575542449951
+Time taken for step: 0.015579975995933637
+Step 55200, Loss: 2.279668092727661
+Time taken for step: 0.016571888991165906
+Step 55250, Loss: 2.5516045093536377
+Time taken for step: 0.016448570997454226
+Step 55300, Loss: 3.2232542037963867
+Time taken for step: 0.01649101900693495
+Step 55350, Loss: 2.4861514568328857
+Time taken for step: 0.01617401000112295
+Step 55400, Loss: 2.3518872261047363
+Time taken for step: 0.014822797995293513
+Step 55450, Loss: 2.4214255809783936
+Time taken for step: 0.0162811930058524
+Step 55500, Loss: 2.448194742202759
+Time taken for step: 0.01666374399792403
+Step 55550, Loss: 2.456284999847412
+Time taken for step: 0.016680346001521684
+Step 55600, Loss: 2.818373918533325
+Time taken for step: 0.016203567007323727
+Step 55650, Loss: 2.395292282104492
+Time taken for step: 0.01616859799833037
+Step 55700, Loss: 2.3296127319335938
+Time taken for step: 0.016506840009242296
+Step 55750, Loss: 2.353567361831665
+Time taken for step: 0.016580497001996264
+Step 55800, Loss: 3.0511200428009033
+Time taken for step: 0.016318841007887386
+Step 55850, Loss: 2.3420071601867676
+Time taken for step: 0.016683595997164957
+Step 55900, Loss: 2.5518789291381836
+Time taken for step: 0.01561560899426695
+Step 55950, Loss: 2.1414008140563965
+Time taken for step: 0.017026273999363184
+Step 56000, Loss: 3.3577382564544678
+Time taken for step: 0.016792121998150833
+Saving params...
+Params saved.
+Step 56050, Loss: 2.777731418609619
+Time taken for step: 0.015485759999137372
+Step 56100, Loss: 3.011916160583496
+Time taken for step: 0.017165058001410216
+Step 56150, Loss: 3.1429848670959473
+Time taken for step: 0.017286123998928815
+Step 56200, Loss: 2.9820964336395264
+Time taken for step: 0.016329588994267397
+Step 56250, Loss: 3.175158977508545
+Time taken for step: 0.01409842299472075
+Step 56300, Loss: 2.455387830734253
+Time taken for step: 0.016593363994616084
+Step 56350, Loss: 3.2799103260040283
+Time taken for step: 0.016490458001499064
+Step 56400, Loss: 2.2233355045318604
+Time taken for step: 0.016790994006441906
+Step 56450, Loss: 2.2021045684814453
+Time taken for step: 0.016610605001915246
+Step 56500, Loss: 3.232499122619629
+Time taken for step: 0.014926358999218792
+Step 56550, Loss: 2.469978094100952
+Time taken for step: 0.016788149005151354
+Step 56600, Loss: 2.674048662185669
+Time taken for step: 0.0158297869929811
+Step 56650, Loss: 2.406938314437866
+Time taken for step: 0.016758901998400688
+Step 56700, Loss: 2.4060897827148438
+Time taken for step: 0.017181214992888272
+Step 56750, Loss: 3.268259286880493
+Time taken for step: 0.016804302998934872
+Step 56800, Loss: 2.56520938873291
+Time taken for step: 0.015385770006105304
+Step 56850, Loss: 2.3674263954162598
+Time taken for step: 0.01578476300346665
+Step 56900, Loss: 3.317319393157959
+Time taken for step: 0.016306132994941436
+Step 56950, Loss: 2.1658387184143066
+Time taken for step: 0.016978799001662992
+Step 57000, Loss: 2.3767662048339844
+Time taken for step: 0.01674563600681722
+Saving params...
+Params saved.
+Step 57050, Loss: 2.1658616065979004
+Time taken for step: 0.016555626993067563
+Step 57100, Loss: 3.3104910850524902
+Time taken for step: 0.01640307500201743
+Step 57150, Loss: 3.4095592498779297
+Time taken for step: 0.016098326988867484
+Step 57200, Loss: 3.041837453842163
+Time taken for step: 0.016760162005084567
+Step 57250, Loss: 3.208235740661621
+Time taken for step: 0.01581776700913906
+Step 57300, Loss: 2.5801479816436768
+Time taken for step: 0.016421451000496745
+Step 57350, Loss: 3.1994426250457764
+Time taken for step: 0.01655017198936548
+Step 57400, Loss: 3.2756495475769043
+Time taken for step: 0.0171418849931797
+Step 57450, Loss: 3.0478034019470215
+Time taken for step: 0.015317517987568863
+Step 57500, Loss: 2.5097620487213135
+Time taken for step: 0.016856080997968093
+Step 57550, Loss: 3.3298399448394775
+Time taken for step: 0.01372668299882207
+Step 57600, Loss: 2.2102279663085938
+Time taken for step: 0.01621031400281936
+Step 57650, Loss: 2.4035470485687256
+Time taken for step: 0.016374394996091723
+Step 57700, Loss: 2.2550785541534424
+Time taken for step: 0.01652602200920228
+Step 57750, Loss: 2.68727970123291
+Time taken for step: 0.01584807099425234
+Step 57800, Loss: 3.083627939224243
+Time taken for step: 0.016629331003059633
+Step 57850, Loss: 2.5305681228637695
+Time taken for step: 0.015814301994396374
+Step 57900, Loss: 2.3740124702453613
+Time taken for step: 0.01610048400470987
+Step 57950, Loss: 3.1004486083984375
+Time taken for step: 0.01596001099096611
+Step 58000, Loss: 2.0573763847351074
+Time taken for step: 0.01715611800318584
+Saving params...
+Params saved.
+Step 58050, Loss: 2.340362310409546
+Time taken for step: 0.01691250600561034
+Step 58100, Loss: 2.06970477104187
+Time taken for step: 0.01654358400264755
+Step 58150, Loss: 3.237029790878296
+Time taken for step: 0.017642889011767693
+Step 58200, Loss: 3.0437183380126953
+Time taken for step: 0.015622282007825561
+Step 58250, Loss: 2.99118709564209
+Time taken for step: 0.01595039300445933
+Step 58300, Loss: 2.3660190105438232
+Time taken for step: 0.016552518995013088
+Step 58350, Loss: 3.1050310134887695
+Time taken for step: 0.016787058004410937
+Step 58400, Loss: 2.277287244796753
+Time taken for step: 0.016460022001410834
+Step 58450, Loss: 2.5283854007720947
+Time taken for step: 0.014548484003171325
+Step 58500, Loss: 3.1836798191070557
+Time taken for step: 0.01688355598889757
+Step 58550, Loss: 2.5303680896759033
+Time taken for step: 0.009995282991440035
+Step 58600, Loss: 3.116079807281494
+Time taken for step: 0.017145210003945976
+Step 58650, Loss: 3.3294293880462646
+Time taken for step: 0.015874144999543205
+Step 58700, Loss: 3.1906676292419434
+Time taken for step: 0.016170232993317768
+Step 58750, Loss: 2.12176775932312
+Time taken for step: 0.016262591001577675
+Step 58800, Loss: 2.5425961017608643
+Time taken for step: 0.016453997988719493
+Step 58850, Loss: 3.0848782062530518
+Time taken for step: 0.01670717599336058
+Step 58900, Loss: 2.930537700653076
+Time taken for step: 0.016335752006853
+Step 58950, Loss: 2.051323413848877
+Time taken for step: 0.016519177006557584
+Step 59000, Loss: 2.065859079360962
+Time taken for step: 0.01664343901211396
+Saving params...
+Params saved.
+Step 59050, Loss: 3.2263131141662598
+Time taken for step: 0.016834351990837604
+Step 59100, Loss: 2.3954391479492188
+Time taken for step: 0.01475335899158381
+Step 59150, Loss: 2.2822024822235107
+Time taken for step: 0.01607204499305226
+Step 59200, Loss: 2.505138397216797
+Time taken for step: 0.01566447300137952
+Step 59250, Loss: 2.809363603591919
+Time taken for step: 0.015964346996042877
+Step 59300, Loss: 2.6731486320495605
+Time taken for step: 0.01603752200026065
+Step 59350, Loss: 3.3287718296051025
+Time taken for step: 0.011328521010000259
+Step 59400, Loss: 2.4078094959259033
+Time taken for step: 0.016941435998887755
+Step 59450, Loss: 3.318962812423706
+Time taken for step: 0.016851325999596156
+Step 59500, Loss: 2.3255209922790527
+Time taken for step: 0.016788483000709675
+Step 59550, Loss: 3.182851791381836
+Time taken for step: 0.016784221996203996
+Step 59600, Loss: 3.2635669708251953
+Time taken for step: 0.016659011991578154
+Step 59650, Loss: 3.3305795192718506
+Time taken for step: 0.01533688700874336
+Step 59700, Loss: 2.90815806388855
+Time taken for step: 0.01678675699804444
+Step 59750, Loss: 2.5007548332214355
+Time taken for step: 0.016941440000664443
+Step 59800, Loss: 3.0865581035614014
+Time taken for step: 0.016992103002849035
+Step 59850, Loss: 2.4728100299835205
+Time taken for step: 0.016454393989988603
+Step 59900, Loss: 2.119666337966919
+Time taken for step: 0.016534006004803814
+Step 59950, Loss: 2.596658229827881
+Time taken for step: 0.01655728099285625
+Step 60000, Loss: 1.9747637510299683
+Time taken for step: 0.01736671300022863
+Saving params...
+Params saved.
+Step 60050, Loss: 2.259488105773926
+Time taken for step: 0.016169751004781574
+Step 60100, Loss: 2.7454752922058105
+Time taken for step: 0.015357828000560403
+Step 60150, Loss: 3.067448139190674
+Time taken for step: 0.015888869005721062
+Step 60200, Loss: 2.9072628021240234
+Time taken for step: 0.016171046008821577
+Step 60250, Loss: 3.069831609725952
+Time taken for step: 0.016481396000017412
+Step 60300, Loss: 2.9058427810668945
+Time taken for step: 0.016217999000218697
+Step 60350, Loss: 3.136289596557617
+Time taken for step: 0.016311407001921907
+Step 60400, Loss: 2.267927885055542
+Time taken for step: 0.016384208007366396
+Step 60450, Loss: 3.138319492340088
+Time taken for step: 0.01679756100929808
+Step 60500, Loss: 2.623962640762329
+Time taken for step: 0.016036189001169987
+Step 60550, Loss: 2.188847780227661
+Time taken for step: 0.016607600991846994
+Step 60600, Loss: 2.50636625289917
+Time taken for step: 0.0164221599989105
+Step 60650, Loss: 3.3803393840789795
+Time taken for step: 0.016395493992604315
+Step 60700, Loss: 2.6798973083496094
+Time taken for step: 0.01633548500831239
+Step 60750, Loss: 2.6419849395751953
+Time taken for step: 0.015664870996261016
+Step 60800, Loss: 2.539120674133301
+Time taken for step: 0.016364299997803755
+Step 60850, Loss: 3.3409526348114014
+Time taken for step: 0.016309048995026387
+Step 60900, Loss: 3.213914155960083
+Time taken for step: 0.01662999800464604
+Step 60950, Loss: 2.6942873001098633
+Time taken for step: 0.01612426400242839
+Step 61000, Loss: 2.046842575073242
+Time taken for step: 0.01671645800524857
+Saving params...
+Params saved.
+Step 61050, Loss: 2.3015408515930176
+Time taken for step: 0.01614932199299801
+Step 61100, Loss: 2.937999725341797
+Time taken for step: 0.016117628998472355
+Step 61150, Loss: 3.142937421798706
+Time taken for step: 0.016799434000859037
+Step 61200, Loss: 3.045321226119995
+Time taken for step: 0.01614357400103472
+Step 61250, Loss: 2.950092315673828
+Time taken for step: 0.016776465010480024
+Step 61300, Loss: 2.6464481353759766
+Time taken for step: 0.01410063799994532
+Step 61350, Loss: 2.7095229625701904
+Time taken for step: 0.014614350991905667
+Step 61400, Loss: 2.3913843631744385
+Time taken for step: 0.016644960007397458
+Step 61450, Loss: 3.000114917755127
+Time taken for step: 0.016544584999792278
+Step 61500, Loss: 3.0662760734558105
+Time taken for step: 0.017268058989429846
+Step 61550, Loss: 2.8142051696777344
+Time taken for step: 0.016924530995311216
+Step 61600, Loss: 2.3368217945098877
+Time taken for step: 0.01607126501039602
+Step 61650, Loss: 3.0575335025787354
+Time taken for step: 0.016461991996038705
+Step 61700, Loss: 3.022841453552246
+Time taken for step: 0.016621317001408897
+Step 61750, Loss: 1.957533359527588
+Time taken for step: 0.011381984993931837
+Step 61800, Loss: 2.2727034091949463
+Time taken for step: 0.016170207993127406
+Step 61850, Loss: 2.6062662601470947
+Time taken for step: 0.014511279005091637
+Step 61900, Loss: 3.2078120708465576
+Time taken for step: 0.016816595001728274
+Step 61950, Loss: 2.4955039024353027
+Time taken for step: 0.016286757003399543
+Step 62000, Loss: 2.4775187969207764
+Time taken for step: 0.01528845498978626
+Saving params...
+Params saved.
+Step 62050, Loss: 2.223057985305786
+Time taken for step: 0.01694457299890928
+Step 62100, Loss: 3.1466283798217773
+Time taken for step: 0.01284425301128067
+Step 62150, Loss: 2.713587522506714
+Time taken for step: 0.014930004006600939
+Step 62200, Loss: 2.782241106033325
+Time taken for step: 0.01686824599164538
+Step 62250, Loss: 2.1521685123443604
+Time taken for step: 0.01659718000155408
+Step 62300, Loss: 2.460188865661621
+Time taken for step: 0.016946750998613425
+Step 62350, Loss: 2.683670997619629
+Time taken for step: 0.016190181006095372
+Step 62400, Loss: 2.172776699066162
+Time taken for step: 0.016320209004334174
+Step 62450, Loss: 2.8930461406707764
+Time taken for step: 0.01613091299077496
+Step 62500, Loss: 3.3405089378356934
+Time taken for step: 0.01643792500544805
+Step 62550, Loss: 2.9104137420654297
+Time taken for step: 0.01731852399825584
+Step 62600, Loss: 2.855405569076538
+Time taken for step: 0.017186540993861854
+Step 62650, Loss: 2.2949776649475098
+Time taken for step: 0.015255894002621062
+Step 62700, Loss: 2.9379830360412598
+Time taken for step: 0.016116959988721646
+Step 62750, Loss: 2.9922549724578857
+Time taken for step: 0.01568387400766369
+Step 62800, Loss: 3.2292234897613525
+Time taken for step: 0.016427858994575217
+Step 62850, Loss: 3.223571300506592
+Time taken for step: 0.016437827987829223
+Step 62900, Loss: 2.4470512866973877
+Time taken for step: 0.016270527994493023
+Step 62950, Loss: 2.4617514610290527
+Time taken for step: 0.015857545993640088
+Step 63000, Loss: 2.9128990173339844
+Time taken for step: 0.017019848004565574
+Saving params...
+Params saved.
+Step 63050, Loss: 2.313375473022461
+Time taken for step: 0.015204109993646853
+Step 63100, Loss: 2.540459394454956
+Time taken for step: 0.016856834990903735
+Step 63150, Loss: 2.953758716583252
+Time taken for step: 0.016869944010977633
+Step 63200, Loss: 2.820148468017578
+Time taken for step: 0.01638237899169326
+Step 63250, Loss: 3.1226043701171875
+Time taken for step: 0.01618976799363736
+Step 63300, Loss: 3.0315332412719727
+Time taken for step: 0.016648851000354625
+Step 63350, Loss: 3.0944831371307373
+Time taken for step: 0.01675697301106993
+Step 63400, Loss: 3.133185386657715
+Time taken for step: 0.01758407399756834
+Step 63450, Loss: 2.8565685749053955
+Time taken for step: 0.016496874988661148
+Step 63500, Loss: 1.8806116580963135
+Time taken for step: 0.016808430998935364
+Step 63550, Loss: 2.2219772338867188
+Time taken for step: 0.012752435999573208
+Step 63600, Loss: 3.338949203491211
+Time taken for step: 0.016566271006013267
+Step 63650, Loss: 3.1201300621032715
+Time taken for step: 0.016788619992439635
+Step 63700, Loss: 2.6850063800811768
+Time taken for step: 0.016244930011453107
+Step 63750, Loss: 2.811561346054077
+Time taken for step: 0.016679420004948042
+Step 63800, Loss: 2.823451280593872
+Time taken for step: 0.015543988993158564
+Step 63850, Loss: 2.7620270252227783
+Time taken for step: 0.0165571959951194
+Step 63900, Loss: 3.0769293308258057
+Time taken for step: 0.016312830994138494
+Step 63950, Loss: 2.9615345001220703
+Time taken for step: 0.01607111700286623
+Step 64000, Loss: 2.937438726425171
+Time taken for step: 0.01648209401173517
+Saving params...
+Params saved.
+Step 64050, Loss: 3.2404842376708984
+Time taken for step: 0.0166596409981139
+Step 64100, Loss: 3.176337242126465
+Time taken for step: 0.015963586993166246
+Step 64150, Loss: 2.2372334003448486
+Time taken for step: 0.011398653994547203
+Step 64200, Loss: 2.9988038539886475
+Time taken for step: 0.016293799999402836
+Step 64250, Loss: 2.8266046047210693
+Time taken for step: 0.01607086900912691
+Step 64300, Loss: 2.399249315261841
+Time taken for step: 0.015410317006171681
+Step 64350, Loss: 3.0166022777557373
+Time taken for step: 0.01689583699044306
+Step 64400, Loss: 2.1712021827697754
+Time taken for step: 0.016430372998001985
+Step 64450, Loss: 2.890467405319214
+Time taken for step: 0.016551023989450186
+Step 64500, Loss: 2.979698657989502
+Time taken for step: 0.01628835099108983
+Step 64550, Loss: 3.18275785446167
+Time taken for step: 0.016124194997246377
+Step 64600, Loss: 2.9693071842193604
+Time taken for step: 0.01647013500041794
+Step 64650, Loss: 2.856890916824341
+Time taken for step: 0.016462105995742604
+Step 64700, Loss: 3.2200846672058105
+Time taken for step: 0.01275429800443817
+Step 64750, Loss: 2.312018632888794
+Time taken for step: 0.016400213993620127
+Step 64800, Loss: 3.2965500354766846
+Time taken for step: 0.016497498989338055
+Step 64850, Loss: 2.5524709224700928
+Time taken for step: 0.017539319000206888
+Step 64900, Loss: 2.326974391937256
+Time taken for step: 0.012386687987600453
+Step 64950, Loss: 3.1804747581481934
+Time taken for step: 0.016213858005357906
+Step 65000, Loss: 3.167525053024292
+Time taken for step: 0.01682350700139068
+Saving params...
+Params saved.
+Step 65050, Loss: 2.983794927597046
+Time taken for step: 0.016552757006138563
+Step 65100, Loss: 2.5693893432617188
+Time taken for step: 0.015838107996387407
+Step 65150, Loss: 2.116773843765259
+Time taken for step: 0.01542659499682486
+Step 65200, Loss: 3.0673701763153076
+Time taken for step: 0.016822499004774727
+Step 65250, Loss: 2.7820634841918945
+Time taken for step: 0.015347158987424336
+Step 65300, Loss: 2.159846782684326
+Time taken for step: 0.016513463997398503
+Step 65350, Loss: 2.9761416912078857
+Time taken for step: 0.01719121600035578
+Step 65400, Loss: 2.6760239601135254
+Time taken for step: 0.016247827996267006
+Step 65450, Loss: 3.050269365310669
+Time taken for step: 0.01629174398840405
+Step 65500, Loss: 2.779644250869751
+Time taken for step: 0.010369415991590358
+Step 65550, Loss: 2.2416117191314697
+Time taken for step: 0.01632511700154282
+Step 65600, Loss: 2.3290114402770996
+Time taken for step: 0.01567848099512048
+Step 65650, Loss: 2.423050880432129
+Time taken for step: 0.012501510005677119
+Step 65700, Loss: 2.440857172012329
+Time taken for step: 0.012086767004802823
+Step 65750, Loss: 3.052306890487671
+Time taken for step: 0.011380371986888349
+Step 65800, Loss: 2.9185292720794678
+Time taken for step: 0.010123134998138994
+Step 65850, Loss: 2.774388551712036
+Time taken for step: 0.016955647006398067
+Step 65900, Loss: 2.221766471862793
+Time taken for step: 0.01297318899014499
+Step 65950, Loss: 2.5931971073150635
+Time taken for step: 0.01511737699911464
+Step 66000, Loss: 2.9840822219848633
+Time taken for step: 0.011924677004572004
+Saving params...
+Params saved.
+Step 66050, Loss: 2.74680495262146
+Time taken for step: 0.016021208997699432
+Step 66100, Loss: 3.2856087684631348
+Time taken for step: 0.015945387989631854
+Step 66150, Loss: 2.4421422481536865
+Time taken for step: 0.016468633999465965
+Step 66200, Loss: 3.091679334640503
+Time taken for step: 0.012897545995656401
+Step 66250, Loss: 3.2110846042633057
+Time taken for step: 0.016077293999842368
+Step 66300, Loss: 2.5501809120178223
+Time taken for step: 0.016725398993003182
+Step 66350, Loss: 2.922487258911133
+Time taken for step: 0.016494744006195106
+Step 66400, Loss: 2.2708663940429688
+Time taken for step: 0.016959052998572588
+Step 66450, Loss: 2.504251480102539
+Time taken for step: 0.012113335003959946
+Step 66500, Loss: 2.3049633502960205
+Time taken for step: 0.013059124001301825
+Step 66550, Loss: 2.964435577392578
+Time taken for step: 0.012037089007208124
+Step 66600, Loss: 3.0608558654785156
+Time taken for step: 0.015535301005002111
+Step 66650, Loss: 2.6461288928985596
+Time taken for step: 0.013749441000982188
+Step 66700, Loss: 2.5390141010284424
+Time taken for step: 0.014882307994412258
+Step 66750, Loss: 2.0076959133148193
+Time taken for step: 0.016270581996650435
+Step 66800, Loss: 2.958650827407837
+Time taken for step: 0.016805425999336876
+Step 66850, Loss: 3.0406746864318848
+Time taken for step: 0.017211070997291245
+Step 66900, Loss: 2.585808753967285
+Time taken for step: 0.01206195900158491
+Step 66950, Loss: 2.163501262664795
+Time taken for step: 0.016156037992914207
+Step 67000, Loss: 1.985844612121582
+Time taken for step: 0.016344946998287924
+Saving params...
+Params saved.
+Step 67050, Loss: 3.0244410037994385
+Time taken for step: 0.01592621300369501
+Step 67100, Loss: 2.33711576461792
+Time taken for step: 0.016490341993630864
+Step 67150, Loss: 3.167152166366577
+Time taken for step: 0.017277077000471763
+Step 67200, Loss: 2.9638004302978516
+Time taken for step: 0.016011883999453858
+Step 67250, Loss: 2.137578248977661
+Time taken for step: 0.016028343001380563
+Step 67300, Loss: 2.196017265319824
+Time taken for step: 0.016676314000505954
+Step 67350, Loss: 2.1914398670196533
+Time taken for step: 0.017280256986850873
+Step 67400, Loss: 1.9585204124450684
+Time taken for step: 0.017034789998433553
+Step 67450, Loss: 2.330674648284912
+Time taken for step: 0.016591045990935527
+Step 67500, Loss: 2.4091129302978516
+Time taken for step: 0.016844249999849126
+Step 67550, Loss: 2.0805249214172363
+Time taken for step: 0.01679884699115064
+Step 67600, Loss: 2.5471062660217285
+Time taken for step: 0.01621296400844585
+Step 67650, Loss: 3.0238444805145264
+Time taken for step: 0.016915006999624893
+Step 67700, Loss: 3.496830940246582
+Time taken for step: 0.01603080400673207
+Step 67750, Loss: 2.341522693634033
+Time taken for step: 0.016334949003066868
+Step 67800, Loss: 3.231456756591797
+Time taken for step: 0.015774576997500844
+Step 67850, Loss: 3.0353691577911377
+Time taken for step: 0.016223463011556305
+Step 67900, Loss: 3.0983593463897705
+Time taken for step: 0.016513278998900205
+Step 67950, Loss: 2.2969090938568115
+Time taken for step: 0.016393440004321747
+Step 68000, Loss: 2.770487070083618
+Time taken for step: 0.01654744500410743
+Saving params...
+Params saved.
+Step 68050, Loss: 3.091484546661377
+Time taken for step: 0.016281822012388147
+Step 68100, Loss: 2.1210803985595703
+Time taken for step: 0.017118153991759755
+Step 68150, Loss: 2.0501654148101807
+Time taken for step: 0.016572471999097615
+Step 68200, Loss: 2.942038059234619
+Time taken for step: 0.017136096008471213
+Step 68250, Loss: 2.1516754627227783
+Time taken for step: 0.016288500002701767
+Step 68300, Loss: 2.2885262966156006
+Time taken for step: 0.01533371300320141
+Step 68350, Loss: 3.2998058795928955
+Time taken for step: 0.016435469005955383
+Step 68400, Loss: 2.831085205078125
+Time taken for step: 0.015268169008777477
+Step 68450, Loss: 3.4132816791534424
+Time taken for step: 0.01633935800055042
+Step 68500, Loss: 2.752727508544922
+Time taken for step: 0.015849180999794044
+Step 68550, Loss: 2.899308919906616
+Time taken for step: 0.016293997992761433
+Step 68600, Loss: 2.8999485969543457
+Time taken for step: 0.01682478899601847
+Step 68650, Loss: 3.0033726692199707
+Time taken for step: 0.01657344300474506
+Step 68700, Loss: 2.185439348220825
+Time taken for step: 0.016859139999723993
+Step 68750, Loss: 2.9171581268310547
+Time taken for step: 0.016695554993930273
+Step 68800, Loss: 3.1691248416900635
+Time taken for step: 0.01589815301122144
+Step 68850, Loss: 2.9129104614257812
+Time taken for step: 0.015511024001170881
+Step 68900, Loss: 3.0253002643585205
+Time taken for step: 0.013155679000192322
+Step 68950, Loss: 2.9978222846984863
+Time taken for step: 0.011336754003423266
+Step 69000, Loss: 2.51023530960083
+Time taken for step: 0.015969593994668685
+Saving params...
+Params saved.
+Step 69050, Loss: 2.333526134490967
+Time taken for step: 0.014685825008200482
+Step 69100, Loss: 3.064566135406494
+Time taken for step: 0.014605154006858356
+Step 69150, Loss: 2.4130849838256836
+Time taken for step: 0.016122925007948652
+Step 69200, Loss: 2.980975866317749
+Time taken for step: 0.016006807010853663
+Step 69250, Loss: 2.210956573486328
+Time taken for step: 0.017286214002524503
+Step 69300, Loss: 2.9821906089782715
+Time taken for step: 0.016682724002748728
+Step 69350, Loss: 3.0583250522613525
+Time taken for step: 0.016644063012790866
+Step 69400, Loss: 2.267669916152954
+Time taken for step: 0.016375749008147977
+Step 69450, Loss: 3.0916872024536133
+Time taken for step: 0.01621360899298452
+Step 69500, Loss: 2.8310108184814453
+Time taken for step: 0.015325250002206303
+Step 69550, Loss: 3.2543137073516846
+Time taken for step: 0.016312717998516746
+Step 69600, Loss: 2.9386050701141357
+Time taken for step: 0.016648767996230163
+Step 69650, Loss: 2.9554662704467773
+Time taken for step: 0.016214281000429764
+Step 69700, Loss: 3.2100164890289307
+Time taken for step: 0.01578774201334454
+Step 69750, Loss: 3.070742130279541
+Time taken for step: 0.017056454002158716
+Step 69800, Loss: 3.0174450874328613
+Time taken for step: 0.016529103988432325
+Step 69850, Loss: 2.039123058319092
+Time taken for step: 0.016974429992842488
+Step 69900, Loss: 2.8469080924987793
+Time taken for step: 0.016621489994577132
+Step 69950, Loss: 2.409752368927002
+Time taken for step: 0.016467723005916923
+Step 70000, Loss: 2.7791576385498047
+Time taken for step: 0.016395671002101153
+Saving params...
+Params saved.
+Step 70050, Loss: 2.9778249263763428
+Time taken for step: 0.01534630601236131
+Step 70100, Loss: 2.4527578353881836
+Time taken for step: 0.016718732003937475
+Step 70150, Loss: 2.9557723999023438
+Time taken for step: 0.016039252004702576
+Step 70200, Loss: 3.0741498470306396
+Time taken for step: 0.0161585890018614
+Step 70250, Loss: 3.1546473503112793
+Time taken for step: 0.01633131899870932
+Step 70300, Loss: 2.965259552001953
+Time taken for step: 0.014081203989917412
+Step 70350, Loss: 3.052215337753296
+Time taken for step: 0.016358241002308205
+Step 70400, Loss: 2.5446743965148926
+Time taken for step: 0.01595502599957399
+Step 70450, Loss: 2.248807907104492
+Time taken for step: 0.01679055301065091
+Step 70500, Loss: 3.009333610534668
+Time taken for step: 0.016705439003999345
+Step 70550, Loss: 2.1558659076690674
+Time taken for step: 0.01606451800034847
+Step 70600, Loss: 2.127769708633423
+Time taken for step: 0.017196470013004728
+Step 70650, Loss: 2.0702924728393555
+Time taken for step: 0.014940177992684767
+Step 70700, Loss: 2.9191555976867676
+Time taken for step: 0.01618120601051487
+Step 70750, Loss: 3.4091925621032715
+Time taken for step: 0.016727030000765808
+Step 70800, Loss: 2.251556634902954
+Time taken for step: 0.011811147996922955
+Step 70850, Loss: 3.0289337635040283
+Time taken for step: 0.01642104599159211
+Step 70900, Loss: 3.031578302383423
+Time taken for step: 0.0164536170050269
+Step 70950, Loss: 2.2427756786346436
+Time taken for step: 0.016686239003320225
+Step 71000, Loss: 2.9990158081054688
+Time taken for step: 0.01559600701148156
+Saving params...
+Params saved.
+Step 71050, Loss: 2.4595537185668945
+Time taken for step: 0.01612330600619316
+Step 71100, Loss: 2.4391512870788574
+Time taken for step: 0.015893314994173124
+Step 71150, Loss: 2.8744940757751465
+Time taken for step: 0.016678241998306476
+Step 71200, Loss: 3.261482000350952
+Time taken for step: 0.016535136004677042
+Step 71250, Loss: 2.1581931114196777
+Time taken for step: 0.016282033000607044
+Step 71300, Loss: 1.9592081308364868
+Time taken for step: 0.01630471598764416
+Step 71350, Loss: 2.8005402088165283
+Time taken for step: 0.010148237997782417
+Step 71400, Loss: 1.940684199333191
+Time taken for step: 0.016455231001600623
+Step 71450, Loss: 2.254370927810669
+Time taken for step: 0.01665233999665361
+Step 71500, Loss: 3.116168975830078
+Time taken for step: 0.015374274997157045
+Step 71550, Loss: 1.9861761331558228
+Time taken for step: 0.017059257996152155
+Step 71600, Loss: 1.943519115447998
+Time taken for step: 0.01654621699708514
+Step 71650, Loss: 3.017876625061035
+Time taken for step: 0.015245197006152011
+Step 71700, Loss: 2.1155402660369873
+Time taken for step: 0.01620184601051733
+Step 71750, Loss: 2.1725451946258545
+Time taken for step: 0.015590725000947714
+Step 71800, Loss: 3.384326934814453
+Time taken for step: 0.01686885599337984
+Step 71850, Loss: 3.1874125003814697
+Time taken for step: 0.01634910899156239
+Step 71900, Loss: 3.1306216716766357
+Time taken for step: 0.01618404900364112
+Step 71950, Loss: 3.134430170059204
+Time taken for step: 0.016426318004960194
+Step 72000, Loss: 3.0534684658050537
+Time taken for step: 0.016689798008883372
+Saving params...
+Params saved.
+Step 72050, Loss: 2.4005038738250732
+Time taken for step: 0.01593998099269811
+Step 72100, Loss: 2.167391061782837
+Time taken for step: 0.016429841009085067
+Step 72150, Loss: 2.6031315326690674
+Time taken for step: 0.016326892990036868
+Step 72200, Loss: 2.5604546070098877
+Time taken for step: 0.016179118989384733
+Step 72250, Loss: 2.7963268756866455
+Time taken for step: 0.016415417005191557
+Step 72300, Loss: 2.948784589767456
+Time taken for step: 0.015986796002835035
+Step 72350, Loss: 2.0935728549957275
+Time taken for step: 0.01625767799851019
+Step 72400, Loss: 3.0685958862304688
+Time taken for step: 0.01691845100140199
+Step 72450, Loss: 2.092817544937134
+Time taken for step: 0.01733398599026259
+Step 72500, Loss: 2.9902384281158447
+Time taken for step: 0.016912033999687992
+Step 72550, Loss: 3.2078170776367188
+Time taken for step: 0.014994700002716854
+Step 72600, Loss: 2.778578281402588
+Time taken for step: 0.016203608000068925
+Step 72650, Loss: 2.834228754043579
+Time taken for step: 0.016152789001353085
+Step 72700, Loss: 2.8057143688201904
+Time taken for step: 0.016565366997383535
+Step 72750, Loss: 2.8177623748779297
+Time taken for step: 0.010487842999282293
+Step 72800, Loss: 3.0095038414001465
+Time taken for step: 0.01631868399272207
+Step 72850, Loss: 2.0301694869995117
+Time taken for step: 0.016863242010003887
+Step 72900, Loss: 2.5510220527648926
+Time taken for step: 0.016080071000033058
+Step 72950, Loss: 3.090578317642212
+Time taken for step: 0.0173064139962662
+Step 73000, Loss: 2.4992663860321045
+Time taken for step: 0.01599236200854648
+Saving params...
+Params saved.
+Step 73050, Loss: 3.016261577606201
+Time taken for step: 0.015950372006045654
+Step 73100, Loss: 2.820906162261963
+Time taken for step: 0.016413578996434808
+Step 73150, Loss: 2.5856997966766357
+Time taken for step: 0.01506206500926055
+Step 73200, Loss: 2.3017995357513428
+Time taken for step: 0.016913478000788018
+Step 73250, Loss: 2.505742311477661
+Time taken for step: 0.015020143997389823
+Step 73300, Loss: 2.084813117980957
+Time taken for step: 0.01564919100201223
+Step 73350, Loss: 2.498600482940674
+Time taken for step: 0.01631025501410477
+Step 73400, Loss: 2.4390370845794678
+Time taken for step: 0.016007646001526155
+Step 73450, Loss: 2.9904422760009766
+Time taken for step: 0.016131351003423333
+Step 73500, Loss: 3.059985637664795
+Time taken for step: 0.01655765899340622
+Step 73550, Loss: 3.0444798469543457
+Time taken for step: 0.01668032399902586
+Step 73600, Loss: 2.4362566471099854
+Time taken for step: 0.016548466999665834
+Step 73650, Loss: 3.3496758937835693
+Time taken for step: 0.01677102800749708
+Step 73700, Loss: 2.409919500350952
+Time taken for step: 0.016307314013829455
+Step 73750, Loss: 2.167201519012451
+Time taken for step: 0.016700869993655942
+Step 73800, Loss: 3.2971506118774414
+Time taken for step: 0.01693535399681423
+Step 73850, Loss: 2.0135228633880615
+Time taken for step: 0.016326241006026976
+Step 73900, Loss: 2.4229233264923096
+Time taken for step: 0.014866149998852052
+Step 73950, Loss: 2.9639880657196045
+Time taken for step: 0.016463263993500732
+Step 74000, Loss: 2.279731035232544
+Time taken for step: 0.016307899000821635
+Saving params...
+Params saved.
+Step 74050, Loss: 2.9457080364227295
+Time taken for step: 0.016357059008441865
+Step 74100, Loss: 2.839996576309204
+Time taken for step: 0.016271673011942767
+Step 74150, Loss: 2.294966459274292
+Time taken for step: 0.016764505999162793
+Step 74200, Loss: 2.571382761001587
+Time taken for step: 0.016045398006099276
+Step 74250, Loss: 2.4968459606170654
+Time taken for step: 0.016033541993238032
+Step 74300, Loss: 2.2265782356262207
+Time taken for step: 0.0161414309986867
+Step 74350, Loss: 3.0767221450805664
+Time taken for step: 0.016166542991413735
+Step 74400, Loss: 2.936661720275879
+Time taken for step: 0.016375539998989552
+Step 74450, Loss: 2.9714062213897705
+Time taken for step: 0.015410466003231704
+Step 74500, Loss: 2.8501267433166504
+Time taken for step: 0.016870890991413034
+Step 74550, Loss: 3.127279281616211
+Time taken for step: 0.016103026995551772
+Step 74600, Loss: 2.415461540222168
+Time taken for step: 0.01696495599753689
+Step 74650, Loss: 2.38983154296875
+Time taken for step: 0.015972474997397512
+Step 74700, Loss: 2.87172269821167
+Time taken for step: 0.01507062598830089
+Step 74750, Loss: 3.1356828212738037
+Time taken for step: 0.01601374600431882
+Step 74800, Loss: 2.784874439239502
+Time taken for step: 0.01567257101123687
+Step 74850, Loss: 3.084219455718994
+Time taken for step: 0.00978807698993478
+Step 74900, Loss: 2.938227653503418
+Time taken for step: 0.014951223012758419
+Step 74950, Loss: 3.1217141151428223
+Time taken for step: 0.016972746001556516
+Step 75000, Loss: 2.470820665359497
+Time taken for step: 0.015570898991427384
+Saving params...
+Params saved.
+Step 75050, Loss: 2.226219654083252
+Time taken for step: 0.016924056006246246
+Step 75100, Loss: 2.4587795734405518
+Time taken for step: 0.015759731992147863
+Step 75150, Loss: 3.0155978202819824
+Time taken for step: 0.016696390011929907
+Step 75200, Loss: 2.9977781772613525
+Time taken for step: 0.016851934997248463
+Step 75250, Loss: 3.0319550037384033
+Time taken for step: 0.017168267993838526
+Step 75300, Loss: 2.322371006011963
+Time taken for step: 0.014730948998476379
+Step 75350, Loss: 3.272083282470703
+Time taken for step: 0.016652792997774668
+Step 75400, Loss: 2.4784817695617676
+Time taken for step: 0.015028667010483332
+Step 75450, Loss: 2.9626407623291016
+Time taken for step: 0.016441907006083056
+Step 75500, Loss: 2.7118031978607178
+Time taken for step: 0.0159180039918283
+Step 75550, Loss: 3.198655605316162
+Time taken for step: 0.016225725994445384
+Step 75600, Loss: 2.704097032546997
+Time taken for step: 0.016574235007283278
+Step 75650, Loss: 2.895857810974121
+Time taken for step: 0.016742614010581747
+Step 75700, Loss: 2.1007778644561768
+Time taken for step: 0.015340644007665105
+Step 75750, Loss: 2.179375410079956
+Time taken for step: 0.016183396000997163
+Step 75800, Loss: 2.0889670848846436
+Time taken for step: 0.017029395996360108
+Step 75850, Loss: 2.924832820892334
+Time taken for step: 0.016459724007290788
+Step 75900, Loss: 2.9185593128204346
+Time taken for step: 0.016231376997893676
+Step 75950, Loss: 2.721081018447876
+Time taken for step: 0.016220135003095493
+Step 76000, Loss: 2.9352166652679443
+Time taken for step: 0.015037386998301372
+Saving params...
+Params saved.
+Step 76050, Loss: 3.1586554050445557
+Time taken for step: 0.016283456003293395
+Step 76100, Loss: 3.0539557933807373
+Time taken for step: 0.016880230003152974
+Step 76150, Loss: 1.960905909538269
+Time taken for step: 0.016929296994931065
+Step 76200, Loss: 3.084305763244629
+Time taken for step: 0.016365711999242194
+Step 76250, Loss: 3.0468368530273438
+Time taken for step: 0.016714861994842067
+Step 76300, Loss: 2.5187246799468994
+Time taken for step: 0.016090263990918174
+Step 76350, Loss: 2.077049970626831
+Time taken for step: 0.0165731470042374
+Step 76400, Loss: 2.612502098083496
+Time taken for step: 0.015057101991260424
+Step 76450, Loss: 3.2207181453704834
+Time taken for step: 0.01616363700304646
+Step 76500, Loss: 2.88462233543396
+Time taken for step: 0.01643531900481321
+Step 76550, Loss: 1.952352523803711
+Time taken for step: 0.01546173999668099
+Step 76600, Loss: 2.3892600536346436
+Time taken for step: 0.01685287299915217
+Step 76650, Loss: 2.33475399017334
+Time taken for step: 0.015559705992927775
+Step 76700, Loss: 3.1701977252960205
+Time taken for step: 0.01642046100459993
+Step 76750, Loss: 1.9935576915740967
+Time taken for step: 0.016624224008410238
+Step 76800, Loss: 2.6363649368286133
+Time taken for step: 0.0159848570037866
+Step 76850, Loss: 2.768312692642212
+Time taken for step: 0.017006992013193667
+Step 76900, Loss: 2.265368938446045
+Time taken for step: 0.016510374000063166
+Step 76950, Loss: 2.6620609760284424
+Time taken for step: 0.01633479898737278
+Step 77000, Loss: 1.9540042877197266
+Time taken for step: 0.01616658899001777
+Saving params...
+Params saved.
+Step 77050, Loss: 2.921558380126953
+Time taken for step: 0.01659764800569974
+Step 77100, Loss: 2.595924139022827
+Time taken for step: 0.016907021999941207
+Step 77150, Loss: 1.9865095615386963
+Time taken for step: 0.016834249006933533
+Step 77200, Loss: 1.9051049947738647
+Time taken for step: 0.014977288999943994
+Step 77250, Loss: 1.9852458238601685
+Time taken for step: 0.017081712998333387
+Step 77300, Loss: 1.83305823802948
+Time taken for step: 0.01666769100120291
+Step 77350, Loss: 2.889099359512329
+Time taken for step: 0.01629278701147996
+Step 77400, Loss: 3.100883960723877
+Time taken for step: 0.016268769002635963
+Step 77450, Loss: 3.0739829540252686
+Time taken for step: 0.016313662999891676
+Step 77500, Loss: 2.794217109680176
+Time taken for step: 0.016524236008990556
+Step 77550, Loss: 2.1560158729553223
+Time taken for step: 0.016301505005685613
+Step 77600, Loss: 2.6334822177886963
+Time taken for step: 0.017178051988594234
+Step 77650, Loss: 2.1689462661743164
+Time taken for step: 0.016479484998853877
+Step 77700, Loss: 2.873868703842163
+Time taken for step: 0.013136863999534398
+Step 77750, Loss: 2.7393784523010254
+Time taken for step: 0.014990464987931773
+Step 77800, Loss: 2.877704620361328
+Time taken for step: 0.016445854998892173
+Step 77850, Loss: 2.2997665405273438
+Time taken for step: 0.015474544998141937
