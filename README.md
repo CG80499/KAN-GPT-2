@@ -11,7 +11,7 @@ Key points:
 
 Results:
 They both achieve a final loss of ~2.46 (despite the KAN model having fewer parameters).
-![image]([files/Users/jzhang/Desktop/Isolated.png](https://github.com/CG80499/KAN-GPT-2/blob/master/images/loss_graph.jpeg)
+![image](https://github.com/CG80499/KAN-GPT-2/blob/master/images/loss_graph.jpeg)
 
 Hyperparameters:
 - `d_model`: 128
