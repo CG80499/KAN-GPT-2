@@ -1,3 +1,3 @@
-# Training small GPT-2 using KANs instead of MLPs
+# Training small GPT-2 models using KANs instead of MLPs in JAX
 
 
