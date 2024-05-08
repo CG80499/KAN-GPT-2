@@ -9,8 +9,10 @@ Key points:
 
 Hyperparameters:
 - `d_model`: 128
+- `d_mlp`: 768
 - `n_heads`: 8
 - `n_layers`: 16
 - `learning_rate`: 1e-5
 - `batch_size`: 16
 - `weight_decay`: 0.001
+- `optimizer`: adamw
