@@ -11,12 +11,12 @@ This repository compares transformers using multilayer perceptron (MLP) and Kolm
 
 **Results**:
 
-They both achieve a final loss of ~2.46 (despite the KAN model having fewer parameters).
+They both achieve a final loss of ~2.46 (despite the KAN model having 25% fewer parameters!).
 ![image](https://github.com/CG80499/KAN-GPT-2/blob/master/images/loss_graph.jpeg)
 
 **Hyperparameters**:
 - `d_model`: 128
-- `d_mlp`: 768
+- `d_mlp`: 768 (when applicable)
 - `n_heads`: 8
 - `n_layers`: 16
 - `learning_rate`: 1e-5
@@ -27,4 +27,4 @@ They both achieve a final loss of ~2.46 (despite the KAN model having fewer para
 
 **Hardware**: Single 1080ti GPU
 
-**Wandb** [link](https://wandb.ai/cg123/kan-transformer?nw=nwusercg123).
+**Wandb**: [link](https://wandb.ai/cg123/kan-transformer?nw=nwusercg123).
