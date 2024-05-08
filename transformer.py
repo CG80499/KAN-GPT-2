@@ -223,30 +223,29 @@ config = Config(
 # Number of parameters:  16.176128
 # Number of non-embedding parameters: 3.3021439999999984
 
-# Big MLP (hidden size 1280)
-# Number of parameters:  17.2288
-# Number of non-embedding parameters: 4.354816
+# Training loop
 
+if __name__ == "__main__":
 
-wandb.init(project="kan-transformer", config=config)
+    wandb.init(project="kan-transformer", config=config)
 
-print("Creating model...")
-state = create_train_state(rng, config)
-print("Number of parameters: ", param_count(state.params))
-print("Number of non-embedding parameters:", param_count(state.params) - (config["d_model"] * TOKENIZER_SIZE * 2 + config["d_model"] * MAX_LEN) / 1e6)
+    print("Creating model...")
+    state = create_train_state(rng, config)
+    print("Number of parameters: ", param_count(state.params))
+    print("Number of non-embedding parameters:", param_count(state.params) - (config["d_model"] * TOKENIZER_SIZE * 2 + config["d_model"] * MAX_LEN) / 1e6)
 
-for step, (batch, mask) in enumerate(TinyStoriesDataset(max_len=MAX_LEN).create_batches(config['batch_size'])):
-    step_start_time = perf_counter()
-    state, loss = train_step(state, batch, mask)
-    step_end_time = perf_counter()
-    if step % 50 == 0:
-        print(f"Step {step}, Loss: {loss}")
-        wandb.log({"loss": loss})
-        print(f"Time taken for step: {step_end_time - step_start_time}")
-        wandb.log({"time": step_end_time - step_start_time})
-    # save every 1000 steps
-    if step % 1000 == 0:
-        print("Saving params...")
-        model_type = config["block_type"]
-        np.save(f"checkpoints/params_{model_type}.npy", state.params)
-        print("Params saved.")
+    for step, (batch, mask) in enumerate(TinyStoriesDataset(max_len=MAX_LEN).create_batches(config['batch_size'])):
+        step_start_time = perf_counter()
+        state, loss = train_step(state, batch, mask)
+        step_end_time = perf_counter()
+        if step % 50 == 0:
+            print(f"Step {step}, Loss: {loss}")
+            wandb.log({"loss": loss})
+            print(f"Time taken for step: {step_end_time - step_start_time}")
+            wandb.log({"time": step_end_time - step_start_time})
+        # save every 1000 steps
+        if step % 1000 == 0:
+            print("Saving params...")
+            model_type = config["block_type"]
+            np.save(f"checkpoints/params_{model_type}.npy", state.params)
+            print("Params saved.")
