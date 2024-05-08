@@ -20,3 +20,5 @@ Hyperparameters:
 - `seq_len`: 64
 
 Hardware: Single 1080ti GPU
+
+Wandb [link](https://wandb.ai/cg123/kan-transformer?nw=nwusercg123).
