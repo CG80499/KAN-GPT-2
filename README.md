@@ -7,6 +7,11 @@ Key points:
 - The tanh function is used to keep the activation values within [-1, 1] rather than dynamic grids.
 - Both models are trained on 134M tokens of [TinyStories](https://arxiv.org/abs/2305.07759).
 - They both use standard GPT-2 architecture (other than the KAN part).
+- The MLP version has 3.3M non-embedding weights and the KAN model has 2.5M non-embedding weights (~25% fewer).
+
+Results:
+They both achieve a final loss of ~2.46 (despite the KAN model having fewer parameters).
+![image]([files/Users/jzhang/Desktop/Isolated.png](https://github.com/CG80499/KAN-GPT-2/blob/master/images/loss_graph.jpeg)
 
 Hyperparameters:
 - `d_model`: 128
