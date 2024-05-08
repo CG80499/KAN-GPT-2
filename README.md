@@ -8,7 +8,6 @@ Key points:
 - Both models are trained on 134M tokens of [TinyStories](https://arxiv.org/abs/2305.07759).
 - They both use standard GPT-2 architecture (other than the KAN part).
 
-
 Hyperparameters:
 - `d_model`: 128
 - `d_mlp`: 768
