@@ -47,7 +47,7 @@ def generate(prompt: str, model: Transformer | KANTransformer, params: dict, enc
             break
         all_logits = fast_apply(params, prompt_tokens_array)
         logit = all_logits[0, prompt_length - 1]
-        # Gready sampling
+        # Greedy sampling
         next_token = jnp.argmax(logit)
         prompt_tokens.append(next_token.item())
     return enc.decode(prompt_tokens)
